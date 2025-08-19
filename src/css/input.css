@@ -1,0 +1,111 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg-color: #f2f9f6;
+  --color-secondary-text-color: #5a7a7e;
+  /* --color-secondary-text-color: #ae34eb; */
+  --color-black: #001b1a;
+  --color-dark-green: #34613a;
+  --color-foreshadow: #f1fae6;
+  --color-yellow: #deff6e;
+  --color-soft-green: #8ebd55;
+  --color-soft-red: #ff5070;
+  --color-blue: #005caa;
+  --color-aksen: #fbad48;
+}
+
+html {
+  background-color: #f2f9f6;
+}
+
+* {
+  font-family: "Lexend Deca", sans-serif;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+hr {
+  border: 1px solid #f2f9f6;
+  opacity: 0.5;
+}
+
+.flex-wrapper {
+  @apply flex flex-col gap-4 lg:gap-6;
+}
+
+.flex-col-4-6 {
+  @apply flex flex-col gap-4 lg:gap-6;
+}
+
+.label-radio:has(.input-radio-choose-role-login:checked) {
+  border: 1px solid #34613a;
+  background-color: #f1fae6;
+  color: #34613a;
+}
+
+.label-radio:has(.input-radio-choose-gender:checked) {
+  border: 1.5px solid #34613a;
+  color: #001b1a;
+  background-color: #f1fae6;
+}
+
+.label-radio:has(.input-radio-active-border:checked) {
+  border: 1.5px solid #34613a;
+  color: #001b1a;
+  background-color: transparent !important;
+}
+
+.input-radio-choose-gender {
+  @apply accent-[#34613a] lg:w-[18px];
+}
+
+.label-input-radio {
+  @apply flex-grow justify-between cursor-pointer px-4 h-[50px] lg:h-[56px] gap-2 flex border items-center border-[#f2f9f6] rounded-2xl text-[#5a7a7e] text-sm lg:text-base font-medium leading-normal;
+}
+
+.login-right,
+.color-gradient-green {
+  background: linear-gradient(210deg, #89b854 1.15%, #042f2b 100%);
+}
+
+.text-16 {
+  @apply text-sm lg:text-base;
+}
+
+.text-14 {
+  @apply text-xs lg:text-sm;
+}
+
+.text-20 {
+  @apply text-lg lg:text-xl;
+}
+
+.text-18 {
+  @apply text-base lg:text-lg;
+}
+
+.title-container-wrapper {
+  @apply text-sm lg:text-base font-medium text-secondary-text-color;
+}
+
+table td {
+  @apply p-4 lg:p-6 whitespace-nowrap;
+}
+
+table td:first-child {
+  @apply rounded-l-2xl lg:rounded-l-3xl;
+}
+
+table td:last-child {
+  @apply rounded-r-2xl lg:rounded-r-3xl;
+}
+
+.react-datepicker-wrapper {
+  @apply w-full;
+}
+
+.tabpanel:not(.react-tabs__tab-panel--selected) {
+  display: none;
+}
