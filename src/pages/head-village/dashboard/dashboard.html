@@ -1108,23 +1108,8 @@
                     </div>
                   </div>
                   <hr />
-                  <div class="w-full relative h-[200px] lg:h-[288px]">
-                    <div
-                      class="recharts-responsive-container"
-                      style="width: 100%; height: 100%; min-width: 0"
-                    >
-                      <div style="width: 0; height: 0; overflow: visible"></div>
-                    </div>
-                    <div
-                      class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center z-10"
-                    >
-                      <h1 class="text-2xl lg:text-3xl font-semibold">1500</h1>
-                      <p
-                        class="text-xs lg:text-sm text-secondary-text-color mt-1 font-medium"
-                      >
-                        Jumlah Penduduk
-                      </p>
-                    </div>
+                  <div class="w-full flex justify-center h-[288px] relative">
+                    <canvas id="citizen-chart"></canvas>
                   </div>
                   <div class="flex flex-col gap-3 lg:gap-4">
                     <div class="flex justify-between items-center">
@@ -1255,7 +1240,9 @@
       </div>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="/src/js/replace-path.js"></script>
     <script src="/src/js/sidebar.js"></script>
+    <script src="/src/js/citizen-chart.js"></script>
   </body>
 </html>
