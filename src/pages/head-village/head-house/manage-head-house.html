@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width">
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+		<meta name="generator" content="Astro v5.13.2">
+		<title>Astro Basics</title>
+
+		<link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="/src/css/output.css">
+	<link rel="stylesheet" href="/_astro/dashboard.wusUqdva.css"></head>
+	<body>
+		
+  <div>
+    <div class="translate-x-0 lg:translate-0 bg-black/15 transition-all fixed z-20 h-dvh w-[100vw] lg:w-[300px]">
+  <div class="bg-white z-10 p-6 lg:py-[30px] h-full overflow-y-auto no-scrollbar scroll ml-auto w-[100vw] lg:w-[300px] gap-6 flex flex-col">
+    <div class="top">
+      <div class="flex justify-between items-center">
+        <div class="flex items-center gap-3">
+          <img src="/icons/logo.svg" alt="">
+          <h1 class="text-2xl font-bold leading-normal text-black">
+            DesaKita.
+          </h1>
+        </div>
+        <button id="toggle-sidebar" class="w-11 rounded-2xl border border-bg-color p-1.5">
+          <img src="/icons/menu.svg" alt="">
+        </button>
+      </div>
+    </div>
+
+    <div class="main-menu flex flex-col gap-2">
+      <h2 class="text-sm font-medium leading-normal text-secondary-text-color">
+        Main Menu
+      </h2>
+
+      <div class="menu group hover:bg-foreshadow rounded-2xl cursor-pointer transition-all text-base text-secondary-text-color font-normal leading-normal bg-foreshadow" data-menu-item="Dashboard" data-menu-link="/head-village/dashboard/dashboard.html" data-menu-expanded="false">
+            <div class="flex justify-between items-center p-4 ">
+              <div class="gap-2 flex items-center">
+                <img src="/icons/menu-dashboard.svg" alt="">
+                <h3 class="text-dark-green font-medium group-hover:text-dark-green group-hover:font-medium">
+                  Dashboard
+                </h3>
+              </div>
+              
+            </div>
+            
+          </div><div class="menu group hover:bg-foreshadow rounded-2xl cursor-pointer transition-all text-base text-secondary-text-color font-normal leading-normal bg-foreshadow" data-menu-item="Kepala Rumah" data-menu-link="/head-village/head-house/head-house.html" data-menu-expanded="false">
+            <div class="flex justify-between items-center p-4 ">
+              <div class="gap-2 flex items-center">
+                <img src="/icons/menu-kepala-rumah.svg" alt="">
+                <h3 class="text-dark-green font-medium group-hover:text-dark-green group-hover:font-medium">
+                  Kepala Rumah
+                </h3>
+              </div>
+              
+            </div>
+            
+          </div><div class="menu group hover:bg-foreshadow rounded-2xl cursor-pointer transition-all text-base text-secondary-text-color font-normal leading-normal " data-menu-item="Bantuan Sosial" data-has-submenu="true" data-menu-link data-menu-expanded="false">
+            <div class="flex justify-between items-center p-4 ">
+              <div class="gap-2 flex items-center">
+                <img src="/icons/menu-bansos.svg" alt="">
+                <h3 class=" group-hover:text-dark-green group-hover:font-medium">
+                  Bantuan Sosial
+                </h3>
+              </div>
+              <img src="/icons/dropdown-menu-sidebar.svg" alt="" class="transition-all" data-menu-toggle="Bantuan Sosial">
+            </div>
+            <div class="sub-menu overflow-hidden transition-all ml-7 relative before:absolute before:top-0 before:left-0 before:w-0.5 before:h-[70%] before:bg-[#F2F9F6]" data-submenu="Bantuan Sosial" style="max-height: 0px">
+                <a href="/social-donate/list-social-donate" class="inline-block w-full">
+                      <div class="relative">
+                        <img src="/icons/line-sub-menu.svg" class="absolute left-0 top-1" alt="">
+                        <p class="bg-transparent font-normal text-secondary-text-color py-4 ml-8 pl-4 rounded-2xl">
+                          List Bansos
+                        </p>
+                      </div>
+                    </a><a href="/social-donate/applicant-social-donate" class="inline-block w-full">
+                      <div class="relative">
+                        <img src="/icons/line-sub-menu.svg" class="absolute left-0 top-1" alt="">
+                        <p class="bg-transparent font-normal text-secondary-text-color py-4 ml-8 pl-4 rounded-2xl">
+                          Pengajuan Bansos
+                        </p>
+                      </div>
+                    </a>
+              </div>
+          </div><div class="menu group hover:bg-foreshadow rounded-2xl cursor-pointer transition-all text-base text-secondary-text-color font-normal leading-normal " data-menu-item="Jadwal Desa" data-has-submenu="true" data-menu-link data-menu-expanded="true">
+            <div class="flex justify-between items-center p-4 pb-2">
+              <div class="gap-2 flex items-center">
+                <img src="/icons/menu-jadwal.svg" alt="">
+                <h3 class=" group-hover:text-dark-green group-hover:font-medium">
+                  Jadwal Desa
+                </h3>
+              </div>
+              <img src="/icons/dropdown-menu-sidebar.svg" alt="" class="transition-all" data-menu-toggle="Jadwal Desa">
+            </div>
+            <div class="sub-menu overflow-hidden transition-all ml-7 relative before:absolute before:top-0 before:left-0 before:w-0.5 before:h-[70%] before:bg-[#F2F9F6]" data-submenu="Jadwal Desa" style="max-height: 400px">
+                <a href="/village-schedule/village-development-schedule" class="inline-block w-full">
+                      <div class="relative">
+                        <img src="/icons/line-sub-menu.svg" class="absolute left-0 top-1" alt="">
+                        <p class="bg-transparent font-normal text-secondary-text-color py-4 ml-8 pl-4 rounded-2xl">
+                          Pembangunan
+                        </p>
+                      </div>
+                    </a><a href="/village-schedule/village-event-schedule" class="inline-block w-full">
+                      <div class="relative">
+                        <img src="/icons/line-sub-menu.svg" class="absolute left-0 top-1" alt="">
+                        <p class="bg-transparent font-normal text-secondary-text-color py-4 ml-8 pl-4 rounded-2xl">
+                          Event Desa
+                        </p>
+                      </div>
+                    </a>
+              </div>
+          </div><div class="menu group hover:bg-foreshadow rounded-2xl cursor-pointer transition-all text-base text-secondary-text-color font-normal leading-normal " data-menu-item="Profil Desa" data-menu-link="/village-profile" data-menu-expanded="false">
+            <div class="flex justify-between items-center p-4 ">
+              <div class="gap-2 flex items-center">
+                <img src="/icons/menu-profile.svg" alt="">
+                <h3 class=" group-hover:text-dark-green group-hover:font-medium">
+                  Profil Desa
+                </h3>
+              </div>
+              
+            </div>
+            
+          </div><div class="menu group hover:bg-foreshadow rounded-2xl cursor-pointer transition-all text-base text-secondary-text-color font-normal leading-normal " data-menu-item="Head Family Role Page" data-menu-link="/head-family" data-menu-expanded="false">
+            <div class="flex justify-between items-center p-4 ">
+              <div class="gap-2 flex items-center">
+                <img src="/icons/menu-profile.svg" alt="">
+                <h3 class=" group-hover:text-dark-green group-hover:font-medium">
+                  Head Family Role Page
+                </h3>
+              </div>
+              
+            </div>
+            
+          </div>
+    </div>
+  </div>
+</div>
+
+    <div class="flex flex-col min-h-dvh">
+      <div class="bg-white fixed z-20 w-full right-0 p-4 lg:p-6 flex items-center gap-4 lg:w-[calc(100%-300px)] lg:ml-auto">
+  <div class="flex-grow">
+    <div class="relative w-full">
+      <div class="absolute left-4 top-1/2 -translate-y-1/2 w-5 lg:w-6">
+        <img src="/search-normal.svg" alt="icons">
+      </div>
+      <input type="text" class="pl-11 lg:pl-12 w-full text-black appearance-none font-medium focus:border-1.5 focus:border-dark-green outline-none transition-all rounded-2xl border border-bg-color p-3 lg:p-4 text-sm lg:text-base placeholder:text-secondary-text-color placeholder:font-medium placeholder:text-sm lg:placeholder:text-base placeholder:leading-normal rounded-full" placeholder="Cari nama penduduk, pengajuan, events, dll">
+    </div>
+  </div>
+  
+  <img src="/icons/notification.svg" alt="" class="w-14 lg:w-15 rounded-2xl border border-bg-color p-1.5 lg:p-4 hidden lg:block">
+  
+  <img src="/icons/setting-2.svg" alt="" class="w-14 lg:w-15 rounded-2xl border border-bg-color p-1.5 lg:p-4 hidden lg:block">
+  
+  <div class="hidden lg:flex gap-4 items-center">
+    <a href="/login" class="image bg-[#F1FAE6] rounded-full overflow-hidden w-[56px] h-[56px]">
+      <img src="/images/user.png" alt="" class="w-full h-full">
+    </a>
+    <div class="gap-[6px] flex flex-col w-[120px]">
+      <h5 class="w-full text-base text-black font-semibold leading-normal">
+        Bimore W
+      </h5>
+      <h6 class="w-full whitespace-nowrap text-sm font-medium leading-normal text-secondary-text-color">
+        Kepala Desa
+      </h6>
+    </div>
+    <img src="/icons/logout.svg" alt="">
+  </div>
+  
+  <div>
+    <a href="/login">
+      <div class="image bg-[#F1FAE6] rounded-full overflow-hidden lg:hidden">
+        <img src="/images/user.png" alt="">
+      </div>
+    </a>
+  </div>
+  
+  <img id="sidebar-toggle" src="/icons/menu.svg" alt="" class="w-14 lg:w-16 rounded-2xl border border-bg-color p-1.5 lg:p-2.5 lg:hidden cursor-pointer">
+</div>
+
+<script type="module">document.addEventListener("DOMContentLoaded",function(){const e=document.getElementById("sidebar-toggle");e&&e.addEventListener("click",function(){const t=new CustomEvent("toggleSidebar",{detail:{action:"toggle"}});document.dispatchEvent(t)})});</script>
+      <div class="p-4 md:p-6 lg:w-[calc(100%-300px)] lg:ml-auto flex-1 mt-22 lg:mt-28">
+        
+  <link rel="preload" as="image" href="/icons/close-modal.svg"/><link rel="preload" as="image" href="/icons/trash.svg"/><link rel="preload" as="image" href="/images/user-2.png"/><link rel="preload" as="image" href="/icons/briefcase.svg"/><link rel="preload" as="image" href="/icons/detail-list-nik.svg"/><link rel="preload" as="image" href="/icons/detail-list-umur.svg"/><link rel="preload" as="image" href="/icons/detail-list-gender.svg"/><link rel="preload" as="image" href="/icons/detail-list-email.svg"/><link rel="preload" as="image" href="/icons/detail-list-nomorhp.svg"/><link rel="preload" as="image" href="/icons/profile-bg.svg"/><link rel="preload" as="image" href="/icons/keyboard.svg"/><link rel="preload" as="image" href="/images/user-3.png"/><link rel="preload" as="image" href="/icons/calendar-2.svg"/><link rel="preload" as="image" href="/icons/money.svg"/><link rel="preload" as="image" href="/icons/bag-2.svg"/><div class="flex flex-col gap-6"><div class="fixed inset-0 z-50 bg-black/70 flex items-center justify-center transition-opacity opacity-0 pointer-events-none"><div class="rounded-2xl overflow-hidden m-4 lg:max-w-[335px]"><div class="top bg-black flex justify-between items-center p-4"><div class=""><h1 class="text-16 text-white font-medium">Hapus Kepala Keluarga?</h1></div><img class="cursor-pointer hover:scale-110 transition-all" src="/icons/close-modal.svg" alt=""/></div><div class="p-4 bg-white flex flex-col gap-3 max-h-[70vh] overflow-y-auto"><p class="text-sm font-medium text-secondary-text-color leading-6">Tindakan ini permanen dan tidak bisa dibatalkan!</p><hr/><div class="flex gap-3"><button type="button" class="flex cursor-pointer justify-center hover:opacity-80 items-center gap-2.5 py-3 px-4 lg:py-4 lg:px-6 rounded-xl lg:rounded-2xl text-sm lg:text-base font-medium leading-normal bg-white border border-bg-color text-black font-medium undefined">Batal</button><button type="button" class="flex cursor-pointer justify-center hover:opacity-80 items-center gap-2.5 py-3 px-4 lg:py-4 lg:px-6 rounded-xl lg:rounded-2xl text-sm lg:text-base font-medium leading-normal bg-[#FF5070] text-white flex-grow"><img src="/icons/trash.svg" alt=""/>Iya Hapus</button></div></div></div></div><div class="flex justify-between items-center flex-wrap gap-3"><div class="gap-1 lg:gap-2 flex flex-col"><div class="text-secondary-text-color font-normal text-sm lg:text-base capitalize"><div class="flex items-center gap-1">Kepala Rumah<span class="text-dark-green font-medium">/ Manage Kepala Rumah</span></div></div><h1 class="text-xl lg:text-2xl text-black font-semibold">Manage Kepala Rumah</h1></div><button type="button" class="flex cursor-pointer justify-center hover:opacity-80 items-center gap-2.5 py-3 px-4 lg:py-4 lg:px-6 rounded-xl lg:rounded-2xl text-sm lg:text-base font-medium leading-normal bg-[#FF5070] text-white undefined">Hapus Data<img class="w-5 lg:w-6" src="/icons/trash.svg" alt=""/></button></div><div class="flex flex-col md:grid md:grid-cols-2 lg:grid-cols-5 items-start gap-3.5"><div class="flex flex-col gap-3.5 lg:flex-grow md:col-span-1 lg:col-span-3 w-full"><div class="p-5 lg:p-6 bg-white rounded-2xl w-full gap-5 lg:gap-6 flex flex-col undefined"><div class="flex justify-between items-center undefined"><div class="lg:gap-1.5 flex flex-col"><h3 class="text-16 font-medium text-secondary-text-color undefined">Kepala Rumah</h3></div></div><div class="flex gap-3 items-center w-full"><div class="bg-foreshadow rounded-full w-[50px] lg:w-[64px] overflow-hidden"><img src="/images/user-2.png" alt="" class="w-full h-full"/></div><div class="flex flex-col gap-1 lg:gap-[6px] flex-grow"><h3 class="text-base lg:text-[18px] font-semibold text-black whitespace-nowrap text-ellipsis overflow-hidden max-w-[120px] sm:max-w-full">Andi Alif Baro</h3><div class="flex items-center gap-1"><img src="/icons/briefcase.svg" alt="" class="w-3.5 lg:w-[18px]"/><span class="text-14 font-medium text-secondary-text-color">Mekanik Kendaraan</span></div></div><div><div class="status uppercase lg:min-w-[100px] text-center width-fit px-3 py-2 lg:p-3 rounded-full text-[10px] lg:text-xs font-semibold text-white bg-[#8EBD55] text-white">Menikah</div></div></div><hr/><div class="flex gap-3 items-center justify-between undefined"><div class="flex gap-3 items-center"><img src="/icons/detail-list-nik.svg" alt=""/><div class="flex flex-col lg:gap-0.5"><h5 class="font-semibold text-base lg:text-[18px] leading-normal break-all text-black">20051005922001005</h5><p class="text-secondary-text-color font-semibold text-16 leading-normal ">Nomor Induk Kependudukan</p></div></div></div><hr/><div class="flex gap-3 items-center justify-between undefined"><div class="flex gap-3 items-center"><img src="/icons/detail-list-umur.svg" alt=""/><div class="flex flex-col lg:gap-0.5"><h5 class="font-semibold text-base lg:text-[18px] leading-normal break-all text-black">42 Tahun</h5><p class="text-secondary-text-color font-semibold text-16 leading-normal ">Umur Kepala Rumah</p></div></div></div><hr/><div class="flex gap-3 items-center justify-between undefined"><div class="flex gap-3 items-center"><img src="/icons/detail-list-gender.svg" alt=""/><div class="flex flex-col lg:gap-0.5"><h5 class="font-semibold text-base lg:text-[18px] leading-normal break-all text-black">Pria</h5><p class="text-secondary-text-color font-semibold text-16 leading-normal ">Jenis Kelamin</p></div></div></div><hr/><div class="flex gap-3 items-center justify-between undefined"><div class="flex gap-3 items-center"><img src="/icons/detail-list-email.svg" alt=""/><div class="flex flex-col lg:gap-0.5"><h5 class="font-semibold text-base lg:text-[18px] leading-normal break-all text-black">fransutomo@desadigital.com</h5><p class="text-secondary-text-color font-semibold text-16 leading-normal ">Email Address</p></div></div></div><hr/><div class="flex gap-3 items-center justify-between undefined"><div class="flex gap-3 items-center"><img src="/icons/detail-list-nomorhp.svg" alt=""/><div class="flex flex-col lg:gap-0.5"><h5 class="font-semibold text-base lg:text-[18px] leading-normal break-all text-black">083212349000</h5><p class="text-secondary-text-color font-semibold text-16 leading-normal ">Nomor Hp</p></div></div></div></div><div class="p-5 lg:p-6 bg-white rounded-2xl w-full gap-5 lg:gap-6 flex flex-col undefined"><div class="flex justify-between items-center undefined"><div class="lg:gap-1.5 flex flex-col"><h2 class="text-2xl lg:text-3xl text-black font-semibold">3</h2><h3 class="text-16 font-medium text-secondary-text-color undefined">Kepala Rumah</h3></div><img src="/icons/profile-bg.svg" alt="" class="w-11 lg:w-[56px]"/></div><hr/><div class="gap-5 lg:gap-6 flex flex-col"><div class="gap-3.5 flex flex-col"><div class="flex justify-between items-center undefined"><div class="lg:gap-1.5 flex flex-col"><h3 class="text-16 font-medium text-secondary-text-color undefined">Istri (1)</h3></div></div><div class="border border-bg-color rounded-2xl flex flex-col gap-4 lg:gap-6 p-3 lg:p-4"><div class="flex gap-3 items-center w-full"><div class="bg-foreshadow rounded-full w-[50px] lg:w-[64px] overflow-hidden"><img src="/images/user-2.png" alt="" class="w-full h-full"/></div><div class="flex flex-col gap-1 lg:gap-[6px] flex-grow"><h3 class="text-base lg:text-[18px] font-semibold text-black whitespace-nowrap text-ellipsis overflow-hidden max-w-[120px] sm:max-w-full">Andi Alif Baro</h3><div class="flex items-center gap-1"><img src="/icons/briefcase.svg" alt="" class="w-3.5 lg:w-[18px]"/><span class="text-14 font-medium text-secondary-text-color">Mekanik Kendaraan</span></div></div><div><p class="text-16 font-medium text-black">32 th</p></div></div><hr/><div class="flex justify-between items-center flex-wrap gap-1"><div class="flex gap-1 items-center"><img src="/icons/keyboard.svg" alt=""/><p class="text-14 font-medium text-secondary-text-color">Nomor Induk Kependudukan :</p></div><p class="text-16 text-black font-medium">27192018210818291</p></div></div></div><div class="gap-3.5 flex flex-col"><div class="flex justify-between items-center undefined"><div class="lg:gap-1.5 flex flex-col"><h3 class="text-16 font-medium text-secondary-text-color undefined">Anak (2)</h3></div></div><div class="border border-bg-color rounded-2xl flex flex-col gap-4 lg:gap-6 p-3 lg:p-4"><div class="flex gap-3 items-center w-full"><div class="bg-foreshadow rounded-full w-[50px] lg:w-[64px] overflow-hidden"><img src="/images/user-3.png" alt="" class="w-full h-full"/></div><div class="flex flex-col gap-1 lg:gap-[6px] flex-grow"><h3 class="text-base lg:text-[18px] font-semibold text-black whitespace-nowrap text-ellipsis overflow-hidden max-w-[120px] sm:max-w-full">Karin Icshan</h3><div class="flex items-center gap-1"><img src="/icons/briefcase.svg" alt="" class="w-3.5 lg:w-[18px]"/><span class="text-14 font-medium text-secondary-text-color">Mahasiswi</span></div></div><div><p class="text-16 font-medium text-black">24 th</p></div></div><hr/><div class="flex justify-between items-center flex-wrap gap-1"><div class="flex gap-1 items-center"><img src="/icons/keyboard.svg" alt=""/><p class="text-14 font-medium text-secondary-text-color">Nomor Induk Kependudukan :</p></div><p class="text-16 text-black font-medium">27192018210818291</p></div></div><div class="border border-bg-color rounded-2xl flex flex-col gap-4 lg:gap-6 p-3 lg:p-4"><div class="flex gap-3 items-center w-full"><div class="bg-foreshadow rounded-full w-[50px] lg:w-[64px] overflow-hidden"><img src="/images/user-3.png" alt="" class="w-full h-full"/></div><div class="flex flex-col gap-1 lg:gap-[6px] flex-grow"><h3 class="text-base lg:text-[18px] font-semibold text-black whitespace-nowrap text-ellipsis overflow-hidden max-w-[120px] sm:max-w-full">Karin Icshan</h3><div class="flex items-center gap-1"><img src="/icons/briefcase.svg" alt="" class="w-3.5 lg:w-[18px]"/><span class="text-14 font-medium text-secondary-text-color">Mahasiswi</span></div></div><div><p class="text-16 font-medium text-black">24 th</p></div></div><hr/><div class="flex justify-between items-center flex-wrap gap-1"><div class="flex gap-1 items-center"><img src="/icons/keyboard.svg" alt=""/><p class="text-14 font-medium text-secondary-text-color">Nomor Induk Kependudukan :</p></div><p class="text-16 text-black font-medium">27192018210818291</p></div></div></div></div></div></div><div class="flex flex-col gap-3.5 md:col-span-1 lg:col-span-2 w-full"><div class="p-5 lg:p-6 bg-white rounded-2xl w-full gap-5 lg:gap-6 flex flex-col undefined"><div class="flex justify-between items-center undefined"><div class="lg:gap-1.5 flex flex-col"><h3 class="text-16 font-medium text-secondary-text-color undefined">Aktivitas Terbaru</h3></div></div><div class="" data-rttabs="true"><ul class="flex flex-wrap gap-3 items-center" role="tablist"><li class="text-16 lg:flex-grow cursor-pointer hover:bg-black hover:text-white transition-all text-secondary-text-color font-medium py-2.5 px-5 flex justify-center items-center lg:py-2.5 lg:px-4.5 rounded-full border border-bg-color bg-black text-white" role="tab" id="tab«r1R1b»0" aria-selected="true" aria-disabled="false" aria-controls="panel«r1R1b»0" tabindex="0" data-rttab="true">Bansos</li><li class="text-16 lg:flex-grow cursor-pointer hover:bg-black hover:text-white transition-all text-secondary-text-color font-medium py-2.5 px-5 flex justify-center items-center lg:py-2.5 lg:px-4.5 rounded-full border border-bg-color" role="tab" id="tab«r1R1b»1" aria-selected="false" aria-disabled="false" aria-controls="panel«r1R1b»1" data-rttab="true">Events</li><li class="text-16 lg:flex-grow cursor-pointer hover:bg-black hover:text-white transition-all text-secondary-text-color font-medium py-2.5 px-5 flex justify-center items-center lg:py-2.5 lg:px-4.5 rounded-full border border-bg-color" role="tab" id="tab«r1R1b»2" aria-selected="false" aria-disabled="false" aria-controls="panel«r1R1b»2" data-rttab="true">Applicants</li></ul><div class="gap-4 flex flex-col lg:gap-6 mt-4 lg:mt-6 react-tabs__tab-panel--selected" role="tabpanel" id="panel«r1R1b»0" aria-labelledby="tab«r1R1b»0"><div class="gap-4 lg:gap-4 flex-col flex rounded-2xl border border-bg-color p-3 lg:p-4"><div class="flex text-14 font-medium text-secondary-text-color justify-between items-center"><p>Tue, 25 Dec 2024</p><img src="/icons/calendar-2.svg" alt=""/></div><hr/><h2 class="text-18 font-semibold text-black">Bantuan Untuk Rakyat Kurang Mampu</h2><div class="flex gap-2 lg:gap-3 items-center"><img class="h-[40px] lg:h-[52px] rounded-2xl object-cover undefined" src="/icons/money.svg" alt=""/><div class="flex flex-col gap-[2px] lg:gap-1 overflow-hidden flex-grow"><div class="flex items-center gap-[2px] lg:gap-1"><h2 class="text-black text-18 font-semibold whitespace-nowrap text-ellipsis overflow-hidden max-w-[200px] capitalize lg:max-w-full">Rp120.000.000</h2></div><div class="flex items-center gap-[2px] text-14 text-secondary-text-color font-medium"><div class="max-w-[150px] lg:max-w-full whitespace-nowrap overflow-hidden text-ellipsis">Nominal Pengajuan</div></div></div><div class="width-fit"><div class="status uppercase lg:min-w-[100px] text-center width-fit px-3 py-2 lg:p-3 rounded-full text-[10px] lg:text-xs font-semibold text-white bg-[#FBAD4A] text-white">Menunggu</div></div></div><hr/><div class="flex justify-between items-center flex-wrap gap-3"><p class="text-14 font-medium text-secondary-text-color flex gap-1 items-center">Nominal Pengajuan:</p><p class="text-16 font-medium text-soft-red">Rp2.500.000</p></div></div><div class="gap-4 lg:gap-4 flex-col flex rounded-2xl border border-bg-color p-3 lg:p-4"><div class="flex text-14 font-medium text-secondary-text-color justify-between items-center"><p>Tue, 31 Dec 2024</p><img src="/icons/calendar-2.svg" alt=""/></div><hr/><h2 class="text-18 font-semibold text-black">Bantuan Pangan Sehari-hari</h2><div class="flex gap-2 lg:gap-3 items-center"><img class="h-[40px] lg:h-[52px] rounded-2xl object-cover undefined" src="/icons/bag-2.svg" alt=""/><div class="flex flex-col gap-[2px] lg:gap-1 overflow-hidden flex-grow"><div class="flex items-center gap-[2px] lg:gap-1"><h2 class="text-black text-18 font-semibold whitespace-nowrap text-ellipsis overflow-hidden max-w-[200px] capitalize lg:max-w-full">Beras 200 Ton</h2></div><div class="flex items-center gap-[2px] text-14 text-secondary-text-color font-medium"><div class="max-w-[150px] lg:max-w-full whitespace-nowrap overflow-hidden text-ellipsis">Bahan Pokok</div></div></div><div class="width-fit"><div class="status uppercase lg:min-w-[100px] text-center width-fit px-3 py-2 lg:p-3 rounded-full text-[10px] lg:text-xs font-semibold text-white bg-[#34613A] text-white">Diterima</div></div></div><hr/><div class="flex justify-between items-center flex-wrap gap-3"><p class="text-14 font-medium text-secondary-text-color flex gap-1 items-center">Nominal Pengajuan:</p><p class="text-16 font-medium text-soft-red">Beras 2kg</p></div></div><div class="gap-4 lg:gap-4 flex-col flex rounded-2xl border border-bg-color p-3 lg:p-4"><div class="flex text-14 font-medium text-secondary-text-color justify-between items-center"><p>Tue, 12 Dec 2024</p><img src="/icons/calendar-2.svg" alt=""/></div><hr/><h2 class="text-18 font-semibold text-black">Bantuan Untuk anak kurang gizi</h2><div class="flex gap-2 lg:gap-3 items-center"><img class="h-[40px] lg:h-[52px] rounded-2xl object-cover undefined" src="/icons/bag-2.svg" alt=""/><div class="flex flex-col gap-[2px] lg:gap-1 overflow-hidden flex-grow"><div class="flex items-center gap-[2px] lg:gap-1"><h2 class="text-black text-18 font-semibold whitespace-nowrap text-ellipsis overflow-hidden max-w-[200px] capitalize lg:max-w-full">Susu 200 Liter</h2></div><div class="flex items-center gap-[2px] text-14 text-secondary-text-color font-medium"><div class="max-w-[150px] lg:max-w-full whitespace-nowrap overflow-hidden text-ellipsis">Bahan Pokok</div></div></div><div class="width-fit"><div class="status uppercase lg:min-w-[100px] text-center width-fit px-3 py-2 lg:p-3 rounded-full text-[10px] lg:text-xs font-semibold text-white bg-[#FF5070] text-white">Ditolak</div></div></div><hr/><div class="flex justify-between items-center flex-wrap gap-3"><p class="text-14 font-medium text-secondary-text-color flex gap-1 items-center">Nominal Pengajuan:</p><p class="text-16 font-medium text-soft-red">Susu 200ml</p></div></div></div><div class="gap-4 flex flex-col lg:gap-6" role="tabpanel" id="panel«r1R1b»1" aria-labelledby="tab«r1R1b»1"></div><div class="react-tabs__tab-panel" role="tabpanel" id="panel«r1R1b»2" aria-labelledby="tab«r1R1b»2"></div></div></div></div></div></div>
+
+      </div>
+    </div>
+  </div>
+
+
+		<script src="/src/js/replace-path.js"></script>
+		<script src="/src/js/sidebar.js"></script>
+	</body>
+</html>

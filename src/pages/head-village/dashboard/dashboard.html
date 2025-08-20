@@ -1,0 +1,1261 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content="Astro v5.13.2" />
+    <title>Astro Basics</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="/src/css/output.css" />
+    <link rel="stylesheet" href="/_astro/dashboard.wusUqdva.css" />
+  </head>
+  <body>
+    <div>
+      <div
+        class="-translate-x-full lg:translate-x-0 bg-black/15 transition-all fixed z-20 h-dvh w-[100vw] lg:w-[300px]"
+      >
+        <div
+          class="bg-white z-10 p-6 lg:py-[30px] h-full overflow-y-auto no-scrollbar scroll ml-auto w-[100vw] lg:w-[300px] gap-6 flex flex-col"
+        >
+          <div class="top">
+            <div class="flex justify-between items-center">
+              <div class="flex items-center gap-3">
+                <img src="/icons/logo.svg" alt="" />
+                <h1 class="text-2xl font-bold leading-normal text-black">
+                  DesaKita.
+                </h1>
+              </div>
+              <button
+                id="toggle-sidebar"
+                class="w-11 rounded-2xl border border-bg-color p-1.5"
+              >
+                <img src="/icons/menu.svg" alt="" />
+              </button>
+            </div>
+          </div>
+
+          <div class="main-menu flex flex-col gap-2">
+            <h2
+              class="text-sm font-medium leading-normal text-secondary-text-color"
+            >
+              Main Menu
+            </h2>
+
+            <div
+              class="menu group hover:bg-foreshadow rounded-2xl cursor-pointer transition-all text-base text-secondary-text-color font-normal leading-normal"
+              data-menu-item="Dashboard"
+              data-menu-link="/head-village/dashboard/dashboard.html"
+              data-menu-expanded="false"
+            >
+              <div class="flex justify-between items-center p-4">
+                <div class="gap-2 flex items-center">
+                  <img src="/icons/menu-dashboard.svg" alt="" />
+                  <h3
+                    class="text-dark-green font-medium group-hover:text-dark-green group-hover:font-medium"
+                  >
+                    Dashboard
+                  </h3>
+                </div>
+              </div>
+            </div>
+            <div
+              class="menu group hover:bg-foreshadow rounded-2xl cursor-pointer transition-all text-base text-secondary-text-color font-normal leading-normal"
+              data-menu-item="Kepala Rumah"
+              data-menu-link="/head-village/head-house/head-house.html"
+              data-menu-expanded="false"
+            >
+              <div class="flex justify-between items-center p-4">
+                <div class="gap-2 flex items-center">
+                  <img src="/icons/menu-kepala-rumah.svg" alt="" />
+                  <h3
+                    class="text-dark-green font-medium group-hover:text-dark-green group-hover:font-medium"
+                  >
+                    Kepala Rumah
+                  </h3>
+                </div>
+              </div>
+            </div>
+            <div
+              class="menu group hover:bg-foreshadow rounded-2xl cursor-pointer transition-all text-base text-secondary-text-color font-normal leading-normal"
+              data-menu-item="Bantuan Sosial"
+              data-has-submenu="true"
+              data-menu-link
+              data-menu-expanded="false"
+            >
+              <div class="flex justify-between items-center p-4">
+                <div class="gap-2 flex items-center">
+                  <img src="/icons/menu-bansos.svg" alt="" />
+                  <h3
+                    class="group-hover:text-dark-green group-hover:font-medium"
+                  >
+                    Bantuan Sosial
+                  </h3>
+                </div>
+                <img
+                  src="/icons/dropdown-menu-sidebar.svg"
+                  alt=""
+                  class="transition-all"
+                  data-menu-toggle="Bantuan Sosial"
+                />
+              </div>
+              <div
+                class="sub-menu overflow-hidden transition-all ml-7 relative before:absolute before:top-0 before:left-0 before:w-0.5 before:h-[70%] before:bg-[#F2F9F6]"
+                data-submenu="Bantuan Sosial"
+                style="max-height: 0px"
+              >
+                <a
+                  href="/social-donate/list-social-donate"
+                  class="inline-block w-full"
+                >
+                  <div class="relative">
+                    <img
+                      src="/icons/line-sub-menu.svg"
+                      class="absolute left-0 top-1"
+                      alt=""
+                    />
+                    <p
+                      class="bg-transparent font-normal text-secondary-text-color py-4 ml-8 pl-4 rounded-2xl"
+                    >
+                      List Bansos
+                    </p>
+                  </div> </a
+                ><a
+                  href="/social-donate/applicant-social-donate"
+                  class="inline-block w-full"
+                >
+                  <div class="relative">
+                    <img
+                      src="/icons/line-sub-menu.svg"
+                      class="absolute left-0 top-1"
+                      alt=""
+                    />
+                    <p
+                      class="bg-transparent font-normal text-secondary-text-color py-4 ml-8 pl-4 rounded-2xl"
+                    >
+                      Pengajuan Bansos
+                    </p>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div
+              class="menu group hover:bg-foreshadow rounded-2xl cursor-pointer transition-all text-base text-secondary-text-color font-normal leading-normal"
+              data-menu-item="Jadwal Desa"
+              data-has-submenu="true"
+              data-menu-link
+              data-menu-expanded="true"
+            >
+              <div class="flex justify-between items-center p-4 pb-2">
+                <div class="gap-2 flex items-center">
+                  <img src="/icons/menu-jadwal.svg" alt="" />
+                  <h3
+                    class="group-hover:text-dark-green group-hover:font-medium"
+                  >
+                    Jadwal Desa
+                  </h3>
+                </div>
+                <img
+                  src="/icons/dropdown-menu-sidebar.svg"
+                  alt=""
+                  class="transition-all"
+                  data-menu-toggle="Jadwal Desa"
+                />
+              </div>
+              <div
+                class="sub-menu overflow-hidden transition-all ml-7 relative before:absolute before:top-0 before:left-0 before:w-0.5 before:h-[70%] before:bg-[#F2F9F6]"
+                data-submenu="Jadwal Desa"
+                style="max-height: 400px"
+              >
+                <a
+                  href="/village-schedule/village-development-schedule"
+                  class="inline-block w-full"
+                >
+                  <div class="relative">
+                    <img
+                      src="/icons/line-sub-menu.svg"
+                      class="absolute left-0 top-1"
+                      alt=""
+                    />
+                    <p
+                      class="bg-transparent font-normal text-secondary-text-color py-4 ml-8 pl-4 rounded-2xl"
+                    >
+                      Pembangunan
+                    </p>
+                  </div> </a
+                ><a
+                  href="/village-schedule/village-event-schedule"
+                  class="inline-block w-full"
+                >
+                  <div class="relative">
+                    <img
+                      src="/icons/line-sub-menu.svg"
+                      class="absolute left-0 top-1"
+                      alt=""
+                    />
+                    <p
+                      class="bg-transparent font-normal text-secondary-text-color py-4 ml-8 pl-4 rounded-2xl"
+                    >
+                      Event Desa
+                    </p>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div
+              class="menu group hover:bg-foreshadow rounded-2xl cursor-pointer transition-all text-base text-secondary-text-color font-normal leading-normal"
+              data-menu-item="Profil Desa"
+              data-menu-link="/village-profile"
+              data-menu-expanded="false"
+            >
+              <div class="flex justify-between items-center p-4">
+                <div class="gap-2 flex items-center">
+                  <img src="/icons/menu-profile.svg" alt="" />
+                  <h3
+                    class="group-hover:text-dark-green group-hover:font-medium"
+                  >
+                    Profil Desa
+                  </h3>
+                </div>
+              </div>
+            </div>
+            <div
+              class="menu group hover:bg-foreshadow rounded-2xl cursor-pointer transition-all text-base text-secondary-text-color font-normal leading-normal"
+              data-menu-item="Head Family Role Page"
+              data-menu-link="/head-family"
+              data-menu-expanded="false"
+            >
+              <div class="flex justify-between items-center p-4">
+                <div class="gap-2 flex items-center">
+                  <img src="/icons/menu-profile.svg" alt="" />
+                  <h3
+                    class="group-hover:text-dark-green group-hover:font-medium"
+                  >
+                    Head Family Role Page
+                  </h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex flex-col min-h-dvh">
+        <div
+          class="bg-white fixed z-20 w-full right-0 p-4 lg:p-6 flex items-center gap-4 lg:w-[calc(100%-300px)] lg:ml-auto"
+        >
+          <div class="flex-grow">
+            <div class="relative w-full">
+              <div class="absolute left-4 top-1/2 -translate-y-1/2 w-5 lg:w-6">
+                <img src="/search-normal.svg" alt="icons" />
+              </div>
+              <input
+                type="text"
+                class="pl-11 lg:pl-12 w-full text-black appearance-none font-medium focus:border-1.5 focus:border-dark-green outline-none transition-all rounded-2xl border border-bg-color p-3 lg:p-4 text-sm lg:text-base placeholder:text-secondary-text-color placeholder:font-medium placeholder:text-sm lg:placeholder:text-base placeholder:leading-normal rounded-full"
+                placeholder="Cari nama penduduk, pengajuan, events, dll"
+              />
+            </div>
+          </div>
+
+          <img
+            src="/icons/notification.svg"
+            alt=""
+            class="w-14 lg:w-15 rounded-2xl border border-bg-color p-1.5 lg:p-4 hidden lg:block"
+          />
+
+          <img
+            src="/icons/setting-2.svg"
+            alt=""
+            class="w-14 lg:w-15 rounded-2xl border border-bg-color p-1.5 lg:p-4 hidden lg:block"
+          />
+
+          <div class="hidden lg:flex gap-4 items-center">
+            <a
+              href="/login"
+              class="image bg-[#F1FAE6] rounded-full overflow-hidden w-[56px] h-[56px]"
+            >
+              <img src="/images/user.png" alt="" class="w-full h-full" />
+            </a>
+            <div class="gap-[6px] flex flex-col w-[120px]">
+              <h5
+                class="w-full text-base text-black font-semibold leading-normal"
+              >
+                Bimore W
+              </h5>
+              <h6
+                class="w-full whitespace-nowrap text-sm font-medium leading-normal text-secondary-text-color"
+              >
+                Kepala Desa
+              </h6>
+            </div>
+            <img src="/icons/logout.svg" alt="" />
+          </div>
+
+          <div>
+            <a href="/login">
+              <div
+                class="image bg-[#F1FAE6] rounded-full overflow-hidden lg:hidden"
+              >
+                <img src="/images/user.png" alt="" />
+              </div>
+            </a>
+          </div>
+
+          <img
+            id="sidebar-toggle"
+            src="/icons/menu.svg"
+            alt=""
+            class="w-14 lg:w-16 rounded-2xl border border-bg-color p-1.5 lg:p-2.5 lg:hidden cursor-pointer"
+          />
+        </div>
+
+        <script type="module">
+          document.addEventListener("DOMContentLoaded", function () {
+            const e = document.getElementById("sidebar-toggle");
+            e &&
+              e.addEventListener("click", function () {
+                const t = new CustomEvent("toggleSidebar", {
+                  detail: { action: "toggle" },
+                });
+                document.dispatchEvent(t);
+              });
+          });
+        </script>
+        <div
+          class="p-4 md:p-6 lg:w-[calc(100%-300px)] lg:ml-auto flex-1 mt-22 lg:mt-28"
+        >
+          <link rel="preload" as="image" href="/icons/picture.svg" /><link
+            rel="preload"
+            as="image"
+            href="/icons/add-square-2.svg"
+          /><link
+            rel="preload"
+            as="image"
+            href="/icons/stat-jumlah-penduduk.svg"
+          /><link rel="preload" as="image" href="/icons/trend-up.svg" /><link
+            rel="preload"
+            as="image"
+            href="/icons/stat-pembangunan.svg"
+          /><link
+            rel="preload"
+            as="image"
+            href="/icons/stat-kepala-rumah.svg"
+          /><link
+            rel="preload"
+            as="image"
+            href="/icons/stat-total-event.svg"
+          /><link rel="preload" as="image" href="/icons/stat-bansos.svg" /><link
+            rel="preload"
+            as="image"
+            href="/icons/stat-bansos-uang.svg"
+          /><link rel="preload" as="image" href="/icons/profile.svg" /><link
+            rel="preload"
+            as="image"
+            href="/icons/stat-bansos-barang.svg"
+          /><link rel="preload" as="image" href="/icons/arrow-left.svg" /><link
+            rel="preload"
+            as="image"
+            href="/icons/arrow-right.svg"
+          /><link
+            rel="preload"
+            as="image"
+            href="/icons/arrow-left-plain.svg"
+          /><link
+            rel="preload"
+            as="image"
+            href="/icons/arrow-right-plain.svg"
+          /><link rel="preload" as="image" href="/images/event.png" /><link
+            rel="preload"
+            as="image"
+            href="/icons/clock.svg"
+          /><link
+            rel="preload"
+            as="image"
+            href="/icons/stat-total-applicant.svg"
+          /><link rel="preload" as="image" href="/images/applicant.png" /><link
+            rel="preload"
+            as="image"
+            href="/images/user-applicant.png"
+          /><link
+            rel="preload"
+            as="image"
+            href="/images/applicant-2.png"
+          /><link
+            rel="preload"
+            as="image"
+            href="/images/applicant-3.png"
+          /><link
+            rel="preload"
+            as="image"
+            href="/icons/receive-square.svg"
+          /><link
+            rel="preload"
+            as="image"
+            href="/icons/stat-citizen.svg"
+          /><link rel="preload" as="image" href="/icons/user.svg" />
+          <div class="gap-3.5 flex flex-col">
+            <div class="flex justify-between items-center flex-wrap gap-3">
+              <div class="gap-1 lg:gap-2 flex flex-col">
+                <h1 class="text-xl lg:text-2xl text-black font-semibold">
+                  Desa Statistics
+                </h1>
+              </div>
+            </div>
+            <div class="flex flex-col gap-3.5 lg:flex-row items-start">
+              <div
+                class="gap-6 flex flex-col color-gradient-green p-6 lg:p-6 rounded-2xl lg:max-w-[380px] w-full"
+              >
+                <img src="/icons/picture.svg" alt="" class="w-fit" />
+                <div class="flex flex-col gap-3">
+                  <p class="text-xs lg:text-sm text-yellow font-medium">
+                    — Bantuan Sosial
+                  </p>
+                  <h1 class="text-lg lg:text-2xl text-white font-semibold">
+                    Dari Desa untuk Warga ❤️
+                  </h1>
+                  <p
+                    class="text-sm lg:text-base text-white leading-6 font-normal"
+                  >
+                    Wujudkan kesejahteraan desa dengan bantuan sosial yang tepat
+                    sasaran.
+                  </p>
+                </div>
+                <button
+                  type="button"
+                  class="flex cursor-pointer justify-center hover:opacity-80 items-center gap-2.5 py-3 px-4 lg:py-4 lg:px-6 rounded-xl lg:rounded-2xl text-sm lg:text-base font-medium leading-normal bg-white text-dark-green font-medium w-full justify-between"
+                >
+                  Bikin Bantuan Sosial<img
+                    src="/icons/add-square-2.svg"
+                    alt=""
+                  />
+                </button>
+              </div>
+              <div class="gap-3.5 flex flex-wrap w-full">
+                <div
+                  class="gap-4 lg:gap-6 flex flex-col flex-grow bg-white rounded-3xl p-6"
+                >
+                  <div class="flex flex-col flex-grow gap-3">
+                    <div class="top flex justify-between items-center gap-3">
+                      <h5 class="text-16 font-medium text-secondary-text-color">
+                        Jumlah Penduduk
+                      </h5>
+                      <img src="/icons/stat-jumlah-penduduk.svg" alt="" />
+                    </div>
+                    <div class="gap-1.5 flex flex-col">
+                      <h2
+                        class="text-2xl lg:text-[32px] font-semibold text-black"
+                      >
+                        243.000
+                      </h2>
+                      <p
+                        class="text-14 font-medium text-secondary-text-color flex gap-1 items-center"
+                      >
+                        <span class="text-dark-green flex gap-1 items-center"
+                          ><img
+                            src="/icons/trend-up.svg"
+                            alt=""
+                            class="inline"
+                          />+12%</span
+                        >dari bulan sebelumnya
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="gap-4 lg:gap-6 flex flex-col flex-grow bg-white rounded-3xl p-6"
+                >
+                  <div class="flex flex-col flex-grow gap-3">
+                    <div class="top flex justify-between items-center gap-3">
+                      <h5 class="text-16 font-medium text-secondary-text-color">
+                        Pembangunan
+                      </h5>
+                      <img src="/icons/stat-pembangunan.svg" alt="" />
+                    </div>
+                    <div class="gap-1.5 flex flex-col">
+                      <h2
+                        class="text-2xl lg:text-[32px] font-semibold text-black"
+                      >
+                        42.000
+                      </h2>
+                      <p
+                        class="text-14 font-medium text-secondary-text-color flex gap-1 items-center"
+                      >
+                        <span class="text-dark-green flex gap-1 items-center"
+                          ><img
+                            src="/icons/trend-up.svg"
+                            alt=""
+                            class="inline"
+                          />+12%</span
+                        >dari bulan sebelumnya
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="gap-4 lg:gap-6 flex flex-col flex-grow bg-white rounded-3xl p-6"
+                >
+                  <div class="flex flex-col flex-grow gap-3">
+                    <div class="top flex justify-between items-center gap-3">
+                      <h5 class="text-16 font-medium text-secondary-text-color">
+                        Kepala Rumah
+                      </h5>
+                      <img src="/icons/stat-kepala-rumah.svg" alt="" />
+                    </div>
+                    <div class="gap-1.5 flex flex-col">
+                      <h2
+                        class="text-2xl lg:text-[32px] font-semibold text-black"
+                      >
+                        9.250
+                      </h2>
+                      <p
+                        class="text-14 font-medium text-secondary-text-color flex gap-1 items-center"
+                      >
+                        <span class="text-dark-green flex gap-1 items-center"
+                          ><img
+                            src="/icons/trend-up.svg"
+                            alt=""
+                            class="inline"
+                          />+12%</span
+                        >dari bulan sebelumnya
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="gap-4 lg:gap-6 flex flex-col flex-grow bg-white rounded-3xl p-6"
+                >
+                  <div class="flex flex-col flex-grow gap-3">
+                    <div class="top flex justify-between items-center gap-3">
+                      <h5 class="text-16 font-medium text-secondary-text-color">
+                        Total Events
+                      </h5>
+                      <img src="/icons/stat-total-event.svg" alt="" />
+                    </div>
+                    <div class="gap-1.5 flex flex-col">
+                      <h2
+                        class="text-2xl lg:text-[32px] font-semibold text-black"
+                      >
+                        12
+                      </h2>
+                      <p
+                        class="text-14 font-medium text-secondary-text-color flex gap-1 items-center"
+                      >
+                        <span class="text-dark-green flex gap-1 items-center"
+                          ><img
+                            src="/icons/trend-up.svg"
+                            alt=""
+                            class="inline"
+                          />+12%</span
+                        >dari bulan sebelumnya
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-7 gap-3.5">
+              <div class="md:col-span-1 lg:col-span-3">
+                <div
+                  class="gap-4 lg:gap-6 flex flex-col flex-grow bg-white rounded-3xl p-6"
+                >
+                  <div class="flex flex-col flex-grow gap-3">
+                    <div class="top flex justify-between items-center gap-3">
+                      <h5 class="text-16 font-medium text-secondary-text-color">
+                        Bantuan Sosial
+                      </h5>
+                      <img src="/icons/stat-bansos.svg" alt="" />
+                    </div>
+                    <div class="gap-1.5 flex flex-col">
+                      <h2
+                        class="text-2xl lg:text-[32px] font-semibold text-black"
+                      >
+                        192
+                      </h2>
+                      <p
+                        class="text-14 font-medium text-secondary-text-color flex gap-1 items-center"
+                      >
+                        <span class="text-dark-green flex gap-1 items-center"
+                          ><img
+                            src="/icons/trend-up.svg"
+                            alt=""
+                            class="inline"
+                          />+12%</span
+                        >dari bulan sebelumnya
+                      </p>
+                    </div>
+                  </div>
+                  <hr />
+                  <div class="gap-4 flex flex-col w-full">
+                    <h1 class="text-black text-20 font-semibold">
+                      Bansos Terakhir
+                    </h1>
+                    <div class="gap-4 flex flex-col">
+                      <div class="flex gap-2 lg:gap-3 items-center">
+                        <img
+                          class="w-[50px] lg:w-[72px] rounded-2xl object-cover undefined"
+                          src="/icons/stat-bansos-uang.svg"
+                          alt=""
+                        />
+                        <div
+                          class="flex flex-col gap-1 lg:gap-2 overflow-hidden flex-grow"
+                        >
+                          <div class="flex items-center gap-1 lg:gap-2">
+                            <h2
+                              class="text-black text-20 font-semibold whitespace-nowrap text-ellipsis overflow-hidden max-w-[200px] capitalize lg:max-w-full"
+                            >
+                              Rp362.500.000
+                            </h2>
+                          </div>
+                          <div
+                            class="flex items-center gap-[2px] text-16 text-secondary-text-color font-medium"
+                          >
+                            <img
+                              src="/icons/profile.svg"
+                              class="inline w-[15px] lg:w-[18px]"
+                              alt=""
+                            />
+                            <div
+                              class="max-w-[150px] lg:max-w-full whitespace-nowrap overflow-hidden text-ellipsis"
+                            >
+                              Diberikan Oleh Azam Din Abdillah
+                            </div>
+                          </div>
+                        </div>
+                        <div class="width-fit">
+                          <div
+                            class="status uppercase lg:min-w-[100px] text-center width-fit px-3 py-2 lg:p-3 rounded-full text-[10px] lg:text-xs font-semibold text-white bg-[#FBAD4A] text-white"
+                          >
+                            Menunggu
+                          </div>
+                        </div>
+                      </div>
+                      <hr />
+                      <div class="flex gap-2 lg:gap-3 items-center">
+                        <img
+                          class="w-[50px] lg:w-[72px] rounded-2xl object-cover undefined"
+                          src="/icons/stat-bansos-barang.svg"
+                          alt=""
+                        />
+                        <div
+                          class="flex flex-col gap-1 lg:gap-2 overflow-hidden flex-grow"
+                        >
+                          <div class="flex items-center gap-1 lg:gap-2">
+                            <h2
+                              class="text-black text-20 font-semibold whitespace-nowrap text-ellipsis overflow-hidden max-w-[200px] capitalize lg:max-w-full"
+                            >
+                              Beras 10kg
+                            </h2>
+                          </div>
+                          <div
+                            class="flex items-center gap-[2px] text-16 text-secondary-text-color font-medium"
+                          >
+                            <img
+                              src="/icons/profile.svg"
+                              class="inline w-[15px] lg:w-[18px]"
+                              alt=""
+                            />
+                            <div
+                              class="max-w-[150px] lg:max-w-full whitespace-nowrap overflow-hidden text-ellipsis"
+                            >
+                              Diberikan Oleh Azam Din Abdillah
+                            </div>
+                          </div>
+                        </div>
+                        <div class="width-fit">
+                          <div
+                            class="status uppercase lg:min-w-[100px] text-center width-fit px-3 py-2 lg:p-3 rounded-full text-[10px] lg:text-xs font-semibold text-white bg-[#34613A] text-white"
+                          >
+                            Diterima
+                          </div>
+                        </div>
+                      </div>
+                      <hr />
+                      <div class="flex gap-2 lg:gap-3 items-center">
+                        <img
+                          class="w-[50px] lg:w-[72px] rounded-2xl object-cover undefined"
+                          src="/icons/stat-bansos-uang.svg"
+                          alt=""
+                        />
+                        <div
+                          class="flex flex-col gap-1 lg:gap-2 overflow-hidden flex-grow"
+                        >
+                          <div class="flex items-center gap-1 lg:gap-2">
+                            <h2
+                              class="text-black text-20 font-semibold whitespace-nowrap text-ellipsis overflow-hidden max-w-[200px] capitalize lg:max-w-full"
+                            >
+                              Rp52.500.000
+                            </h2>
+                          </div>
+                          <div
+                            class="flex items-center gap-[2px] text-16 text-secondary-text-color font-medium"
+                          >
+                            <img
+                              src="/icons/profile.svg"
+                              class="inline w-[15px] lg:w-[18px]"
+                              alt=""
+                            />
+                            <div
+                              class="max-w-[150px] lg:max-w-full whitespace-nowrap overflow-hidden text-ellipsis"
+                            >
+                              Diberikan Oleh Azam Din Abdillah
+                            </div>
+                          </div>
+                        </div>
+                        <div class="width-fit">
+                          <div
+                            class="status uppercase lg:min-w-[100px] text-center width-fit px-3 py-2 lg:p-3 rounded-full text-[10px] lg:text-xs font-semibold text-white bg-[#FF5070] text-white"
+                          >
+                            Ditolak
+                          </div>
+                        </div>
+                      </div>
+                      <hr />
+                      <div class="flex gap-2 lg:gap-3 items-center">
+                        <img
+                          class="w-[50px] lg:w-[72px] rounded-2xl object-cover undefined"
+                          src="/icons/stat-bansos-uang.svg"
+                          alt=""
+                        />
+                        <div
+                          class="flex flex-col gap-1 lg:gap-2 overflow-hidden flex-grow"
+                        >
+                          <div class="flex items-center gap-1 lg:gap-2">
+                            <h2
+                              class="text-black text-20 font-semibold whitespace-nowrap text-ellipsis overflow-hidden max-w-[200px] capitalize lg:max-w-full"
+                            >
+                              Rp52.500.000
+                            </h2>
+                          </div>
+                          <div
+                            class="flex items-center gap-[2px] text-16 text-secondary-text-color font-medium"
+                          >
+                            <img
+                              src="/icons/profile.svg"
+                              class="inline w-[15px] lg:w-[18px]"
+                              alt=""
+                            />
+                            <div
+                              class="max-w-[150px] lg:max-w-full whitespace-nowrap overflow-hidden text-ellipsis"
+                            >
+                              Diberikan Oleh Azam Din Abdillah
+                            </div>
+                          </div>
+                        </div>
+                        <div class="width-fit">
+                          <div
+                            class="status uppercase lg:min-w-[100px] text-center width-fit px-3 py-2 lg:p-3 rounded-full text-[10px] lg:text-xs font-semibold text-white bg-[#34613A] text-white"
+                          >
+                            Diterima
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="flex flex-col gap-4 lg:gap-6 bg-white rounded-3xl p-6 md:col-span-1 lg:col-span-4"
+              >
+                <div class="flex flex-col gap-4">
+                  <div class="top flex justify-between gap-4 items-center">
+                    <img
+                      class="w-[45px] lg:w-[56px]"
+                      src="/icons/arrow-left.svg"
+                      alt=""
+                    />
+                    <h1 class="text-black text-20 font-semibold">
+                      December 2024
+                    </h1>
+                    <img
+                      class="w-[45px] lg:w-[56px]"
+                      src="/icons/arrow-right.svg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="flex gap-4 flex-wrap">
+                    <div class="gap-3 flex flex-col items-center flex-grow">
+                      <div
+                        class="rounded-full w-[46px] h-[46px] text-16 text-dark-green font-medium bg-foreshadow flex justify-center items-center"
+                      >
+                        28
+                      </div>
+                      <p class="text-14 font-medium text-secondary-text-color">
+                        Sen
+                      </p>
+                    </div>
+                    <div class="gap-3 flex flex-col items-center flex-grow">
+                      <div
+                        class="rounded-full w-[46px] h-[46px] text-16 text-dark-green font-medium bg-foreshadow flex justify-center items-center"
+                      >
+                        28
+                      </div>
+                      <p class="text-14 font-medium text-secondary-text-color">
+                        Sen
+                      </p>
+                    </div>
+                    <div class="gap-3 flex flex-col items-center flex-grow">
+                      <div
+                        class="rounded-full w-[46px] h-[46px] text-16 text-dark-green font-medium bg-foreshadow flex justify-center items-center"
+                      >
+                        28
+                      </div>
+                      <p class="text-14 font-medium text-secondary-text-color">
+                        Sen
+                      </p>
+                    </div>
+                    <div class="gap-3 flex flex-col items-center flex-grow">
+                      <div
+                        class="rounded-full w-[46px] h-[46px] text-16 text-dark-green font-medium bg-foreshadow flex justify-center items-center"
+                      >
+                        28
+                      </div>
+                      <p class="text-14 font-medium text-secondary-text-color">
+                        Sen
+                      </p>
+                    </div>
+                    <div class="gap-3 flex flex-col items-center flex-grow">
+                      <div
+                        class="rounded-full w-[46px] h-[46px] text-16 text-dark-green font-medium bg-foreshadow flex justify-center items-center"
+                      >
+                        28
+                      </div>
+                      <p class="text-14 font-medium text-secondary-text-color">
+                        Sen
+                      </p>
+                    </div>
+                    <div class="gap-3 flex flex-col items-center flex-grow">
+                      <div
+                        class="rounded-full w-[46px] h-[46px] text-16 text-dark-green font-medium bg-foreshadow flex justify-center items-center"
+                      >
+                        28
+                      </div>
+                      <p class="text-14 font-medium text-secondary-text-color">
+                        Sen
+                      </p>
+                    </div>
+                    <div class="gap-3 flex flex-col items-center flex-grow">
+                      <div
+                        class="rounded-full w-[46px] h-[46px] text-16 text-dark-green font-medium bg-foreshadow flex justify-center items-center"
+                      >
+                        28
+                      </div>
+                      <p class="text-14 font-medium text-secondary-text-color">
+                        Sen
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <hr />
+                <div class="flex flex-col gap-4">
+                  <div class="top flex justify-between gap-4 items-center">
+                    <img
+                      class="w-[20px] lg:w-[24px]"
+                      src="/icons/arrow-left-plain.svg"
+                      alt=""
+                    />
+                    <h1 class="text-secondary-text-color text-16 font-medium">
+                      Upcoming Events (2)
+                    </h1>
+                    <img
+                      class="w-[20px] lg:w-[24px]"
+                      src="/icons/arrow-right-plain.svg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="relative">
+                    <img
+                      src="/images/event.png"
+                      alt=""
+                      class="h-[280px] lg:h-[365px] w-full object-cover rounded-2xl"
+                    />
+                    <div
+                      class="gap-1 lg:gap-1.5 flex flex-col absolute lg:bottom-4 bottom-3 left-1/2 -translate-x-1/2 border bg-white/[0.02] backdrop-blur-[26px] border-white/[0.02] w-[93%] p-3 lg:p-4 rounded-2xl"
+                    >
+                      <h3 class="text-20 text-white font-semibold">
+                        Belajar Coding Bersama
+                      </h3>
+                      <div class="flex items-center gap-1">
+                        <img src="/icons/clock.svg" alt="" /><span
+                          class="text-20 text-white font-semibold"
+                          >11:30 WIB</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="flex flex-col md:grid md:grid-cols-2 lg:grid-cols-5 gap-4"
+            >
+              <div
+                class="gap-3.5 flex flex-col flex-grow w-full md:col-span-1 lg:col-span-3"
+              >
+                <div>
+                  <div
+                    class="gap-4 lg:gap-6 flex flex-col flex-grow bg-white rounded-3xl p-6"
+                  >
+                    <div class="flex flex-col flex-grow gap-3">
+                      <div class="top flex justify-between items-center gap-3">
+                        <h5
+                          class="text-16 font-medium text-secondary-text-color"
+                        >
+                          Total Applicants
+                        </h5>
+                        <img src="/icons/stat-total-applicant.svg" alt="" />
+                      </div>
+                      <div class="gap-1.5 flex flex-col">
+                        <h2
+                          class="text-2xl lg:text-[32px] font-semibold text-black"
+                        >
+                          1.200
+                        </h2>
+                        <p
+                          class="text-14 font-medium text-secondary-text-color flex gap-1 items-center"
+                        >
+                          <span class="text-dark-green flex gap-1 items-center"
+                            ><img
+                              src="/icons/trend-up.svg"
+                              alt=""
+                              class="inline"
+                            />+12%</span
+                          >dari bulan sebelumnya
+                        </p>
+                      </div>
+                    </div>
+                    <hr />
+                    <div class="gap-4 flex flex-col">
+                      <h1 class="text-black text-20 font-semibold">
+                        Applicant Terakhir
+                      </h1>
+                      <div class="gap-4 flex flex-col">
+                        <div class="flex gap-2 lg:gap-3 items-center">
+                          <img
+                            class="w-[50px] lg:w-[72px] rounded-2xl object-cover undefined"
+                            src="/images/applicant.png"
+                            alt=""
+                          />
+                          <div
+                            class="flex flex-col gap-1 lg:gap-2 overflow-hidden flex-grow"
+                          >
+                            <div class="flex items-center gap-1 lg:gap-2">
+                              <div
+                                class="bg-foreshadow rounded-full w-6 lg:w-8 overflow-hidden"
+                              >
+                                <img
+                                  src="/images/user-applicant.png"
+                                  alt=""
+                                  class="w-full h-full"
+                                />
+                              </div>
+                              <h2
+                                class="text-black text-20 font-semibold whitespace-nowrap text-ellipsis overflow-hidden max-w-[200px] capitalize lg:max-w-full"
+                              >
+                                Azam Din Abdillah
+                              </h2>
+                            </div>
+                            <div
+                              class="flex items-center gap-[2px] text-16 text-secondary-text-color font-medium"
+                            >
+                              <div
+                                class="max-w-[150px] lg:max-w-full whitespace-nowrap overflow-hidden text-ellipsis"
+                              >
+                                Melamar pembangunan Jalanan Utama Desa
+                              </div>
+                            </div>
+                          </div>
+                          <div class="width-fit">
+                            <div
+                              class="status uppercase lg:min-w-[100px] text-center width-fit px-3 py-2 lg:p-3 rounded-full text-[10px] lg:text-xs font-semibold text-white bg-[#FBAD4A] text-white"
+                            >
+                              Menunggu
+                            </div>
+                          </div>
+                        </div>
+                        <hr />
+                        <div class="flex gap-2 lg:gap-3 items-center">
+                          <img
+                            class="w-[50px] lg:w-[72px] rounded-2xl object-cover undefined"
+                            src="/images/applicant-2.png"
+                            alt=""
+                          />
+                          <div
+                            class="flex flex-col gap-1 lg:gap-2 overflow-hidden flex-grow"
+                          >
+                            <div class="flex items-center gap-1 lg:gap-2">
+                              <div
+                                class="bg-foreshadow rounded-full w-6 lg:w-8 overflow-hidden"
+                              >
+                                <img
+                                  src="/images/user-applicant.png"
+                                  alt=""
+                                  class="w-full h-full"
+                                />
+                              </div>
+                              <h2
+                                class="text-black text-20 font-semibold whitespace-nowrap text-ellipsis overflow-hidden max-w-[200px] capitalize lg:max-w-full"
+                              >
+                                Surti Jasmine
+                              </h2>
+                            </div>
+                            <div
+                              class="flex items-center gap-[2px] text-16 text-secondary-text-color font-medium"
+                            >
+                              <div
+                                class="max-w-[150px] lg:max-w-full whitespace-nowrap overflow-hidden text-ellipsis"
+                              >
+                                Melamar pembangunan Balai Desa
+                              </div>
+                            </div>
+                          </div>
+                          <div class="width-fit">
+                            <div
+                              class="status uppercase lg:min-w-[100px] text-center width-fit px-3 py-2 lg:p-3 rounded-full text-[10px] lg:text-xs font-semibold text-white bg-[#34613A] text-white"
+                            >
+                              Diterima
+                            </div>
+                          </div>
+                        </div>
+                        <hr />
+                        <div class="flex gap-2 lg:gap-3 items-center">
+                          <img
+                            class="w-[50px] lg:w-[72px] rounded-2xl object-cover undefined"
+                            src="/images/applicant-3.png"
+                            alt=""
+                          />
+                          <div
+                            class="flex flex-col gap-1 lg:gap-2 overflow-hidden flex-grow"
+                          >
+                            <div class="flex items-center gap-1 lg:gap-2">
+                              <div
+                                class="bg-foreshadow rounded-full w-6 lg:w-8 overflow-hidden"
+                              >
+                                <img
+                                  src="/images/user-applicant.png"
+                                  alt=""
+                                  class="w-full h-full"
+                                />
+                              </div>
+                              <h2
+                                class="text-black text-20 font-semibold whitespace-nowrap text-ellipsis overflow-hidden max-w-[200px] capitalize lg:max-w-full"
+                              >
+                                Masayoshi
+                              </h2>
+                            </div>
+                            <div
+                              class="flex items-center gap-[2px] text-16 text-secondary-text-color font-medium"
+                            >
+                              <div
+                                class="max-w-[150px] lg:max-w-full whitespace-nowrap overflow-hidden text-ellipsis"
+                              >
+                                Melamar pembangunan Puskemas Desa
+                              </div>
+                            </div>
+                          </div>
+                          <div class="width-fit">
+                            <div
+                              class="status uppercase lg:min-w-[100px] text-center width-fit px-3 py-2 lg:p-3 rounded-full text-[10px] lg:text-xs font-semibold text-white bg-[#FF5070] text-white"
+                            >
+                              Ditolak
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="gap-6 flex justify-between flex-wrap color-gradient-green p-6 lg:p-6 rounded-2xl w-full"
+                >
+                  <div class="flex flex-col gap-1 lg:gap-3">
+                    <p class="text-xs lg:text-sm text-yellow font-medium">
+                      — Unduh Data Desa
+                    </p>
+                    <h1 class="text-lg lg:text-2xl text-white font-semibold">
+                      Data Desa Terkini
+                    </h1>
+                  </div>
+                  <div class="">
+                    <button
+                      type="button"
+                      class="flex cursor-pointer justify-center hover:opacity-80 items-center gap-2.5 py-3 px-4 lg:py-4 lg:px-6 rounded-xl lg:rounded-2xl text-sm lg:text-base font-medium leading-normal bg-white text-dark-green font-medium w-full justify-between flex-1"
+                    >
+                      Download Laporan<img
+                        src="/icons/receive-square.svg"
+                        alt=""
+                      />
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="chart w-full lg:flex-grow md:col-span-1 lg:col-span-2"
+              >
+                <div
+                  class="gap-4 lg:gap-6 flex flex-col flex-grow bg-white rounded-3xl p-6"
+                >
+                  <div class="flex flex-col flex-grow gap-3">
+                    <div class="top flex justify-between items-center gap-3">
+                      <h5 class="text-16 font-medium text-secondary-text-color">
+                        Statistics Penduduk
+                      </h5>
+                      <img src="/icons/stat-citizen.svg" alt="" />
+                    </div>
+                  </div>
+                  <hr />
+                  <div class="w-full relative h-[200px] lg:h-[288px]">
+                    <div
+                      class="recharts-responsive-container"
+                      style="width: 100%; height: 100%; min-width: 0"
+                    >
+                      <div style="width: 0; height: 0; overflow: visible"></div>
+                    </div>
+                    <div
+                      class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center z-10"
+                    >
+                      <h1 class="text-2xl lg:text-3xl font-semibold">1500</h1>
+                      <p
+                        class="text-xs lg:text-sm text-secondary-text-color mt-1 font-medium"
+                      >
+                        Jumlah Penduduk
+                      </p>
+                    </div>
+                  </div>
+                  <div class="flex flex-col gap-3 lg:gap-4">
+                    <div class="flex justify-between items-center">
+                      <div class="flex flex-col gap-[2px] lg:gap-1">
+                        <div class="flex gap-1 items-center">
+                          <div
+                            style="background-color: #34613a"
+                            class="w-[12px] h-[12px] rounded-full"
+                          ></div>
+                          <span class="text-black text-16 font-medium"
+                            >Pria</span
+                          >
+                        </div>
+                        <p
+                          class="text-14 text-secondary-text-color font-medium"
+                        >
+                          Rentang usia:
+                          <!-- -->32-36<!-- -->
+                          tahun
+                        </p>
+                      </div>
+                      <div
+                        class="flex items-center gap-1 text-16 text-black font-medium"
+                      >
+                        114.21<img
+                          src="/icons/user.svg"
+                          alt=""
+                          class="w-[18px]"
+                        />
+                      </div>
+                    </div>
+                    <hr />
+                    <div class="flex justify-between items-center">
+                      <div class="flex flex-col gap-[2px] lg:gap-1">
+                        <div class="flex gap-1 items-center">
+                          <div
+                            style="background-color: #8ebd55"
+                            class="w-[12px] h-[12px] rounded-full"
+                          ></div>
+                          <span class="text-black text-16 font-medium"
+                            >Wanita</span
+                          >
+                        </div>
+                        <p
+                          class="text-14 text-secondary-text-color font-medium"
+                        >
+                          Rentang usia:
+                          <!-- -->26-31<!-- -->
+                          tahun
+                        </p>
+                      </div>
+                      <div
+                        class="flex items-center gap-1 text-16 text-black font-medium"
+                      >
+                        97.2<img
+                          src="/icons/user.svg"
+                          alt=""
+                          class="w-[18px]"
+                        />
+                      </div>
+                    </div>
+                    <hr />
+                    <div class="flex justify-between items-center">
+                      <div class="flex flex-col gap-[2px] lg:gap-1">
+                        <div class="flex gap-1 items-center">
+                          <div
+                            style="background-color: #fa7139"
+                            class="w-[12px] h-[12px] rounded-full"
+                          ></div>
+                          <span class="text-black text-16 font-medium"
+                            >Anak-anak</span
+                          >
+                        </div>
+                        <p
+                          class="text-14 text-secondary-text-color font-medium"
+                        >
+                          Rentang usia:
+                          <!-- -->6-12<!-- -->
+                          tahun
+                        </p>
+                      </div>
+                      <div
+                        class="flex items-center gap-1 text-16 text-black font-medium"
+                      >
+                        24.3<img
+                          src="/icons/user.svg"
+                          alt=""
+                          class="w-[18px]"
+                        />
+                      </div>
+                    </div>
+                    <hr />
+                    <div class="flex justify-between items-center">
+                      <div class="flex flex-col gap-[2px] lg:gap-1">
+                        <div class="flex gap-1 items-center">
+                          <div
+                            style="background-color: #fbad48"
+                            class="w-[12px] h-[12px] rounded-full"
+                          ></div>
+                          <span class="text-black text-16 font-medium"
+                            >Balita</span
+                          >
+                        </div>
+                        <p
+                          class="text-14 text-secondary-text-color font-medium"
+                        >
+                          Rentang usia:
+                          <!-- -->0-5<!-- -->
+                          tahun
+                        </p>
+                      </div>
+                      <div
+                        class="flex items-center gap-1 text-16 text-black font-medium"
+                      >
+                        7.29<img
+                          src="/icons/user.svg"
+                          alt=""
+                          class="w-[18px]"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="/src/js/replace-path.js"></script>
+    <script src="/src/js/sidebar.js"></script>
+  </body>
+</html>

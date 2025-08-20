@@ -8,7 +8,9 @@
 		<title>Astro Basics</title>
 
 		<link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="/_astro/index.wusUqdva.css"></head>
+
+	<link rel="stylesheet" href="/src/css/output.css">
+	<link rel="stylesheet" href="/_astro/dashboard.wusUqdva.css"></head>
 	<body>
 		
   <div>
@@ -33,7 +35,7 @@
         Main Menu
       </h2>
 
-      <div class="menu group hover:bg-foreshadow rounded-2xl cursor-pointer transition-all text-base text-secondary-text-color font-normal leading-normal bg-foreshadow" data-menu-item="Dashboard" data-menu-link="/head-village/dashboard" data-menu-expanded="false">
+      <div class="menu group hover:bg-foreshadow rounded-2xl cursor-pointer transition-all text-base text-secondary-text-color font-normal leading-normal bg-foreshadow" data-menu-item="Dashboard" data-menu-link="/head-village/dashboard/dashboard.html" data-menu-expanded="false">
             <div class="flex justify-between items-center p-4 ">
               <div class="gap-2 flex items-center">
                 <img src="/icons/menu-dashboard.svg" alt="">
@@ -44,7 +46,7 @@
               
             </div>
             
-          </div><div class="menu group hover:bg-foreshadow rounded-2xl cursor-pointer transition-all text-base text-secondary-text-color font-normal leading-normal bg-foreshadow" data-menu-item="Kepala Rumah" data-menu-link="/head-village/head-house" data-menu-expanded="false">
+          </div><div class="menu group hover:bg-foreshadow rounded-2xl cursor-pointer transition-all text-base text-secondary-text-color font-normal leading-normal bg-foreshadow" data-menu-item="Kepala Rumah" data-menu-link="/head-village/head-house/head-house.html" data-menu-expanded="false">
             <div class="flex justify-between items-center p-4 ">
               <div class="gap-2 flex items-center">
                 <img src="/icons/menu-kepala-rumah.svg" alt="">
@@ -136,8 +138,6 @@
   </div>
 </div>
 
-<script type="module">document.addEventListener("DOMContentLoaded",function(){const m=document.getElementById("toggle-sidebar");m&&m.addEventListener("click",function(){window.dispatchEvent(new CustomEvent("toggleSidebar"))}),document.querySelectorAll(".menu").forEach(s=>{s.addEventListener("click",function(t){const r=t.target,e=t.currentTarget;if(r.closest(".sub-menu"))return;const n=e.getAttribute("data-has-submenu")==="true",u=e.getAttribute("data-menu-link"),o=e.getAttribute("data-menu-item");if(n){const a=document.querySelector(`[data-submenu="${o}"]`),i=e.querySelector(`[data-menu-toggle="${o}"]`);if(a&&i){const c=a.style.maxHeight&&a.style.maxHeight!=="0px";a.style.maxHeight=c?"0px":"400px",i.style.transform=c?"rotate(0deg)":"rotate(180deg)",e.setAttribute("data-menu-expanded",(!c).toString())}}else u&&(window.location.href=u)})});const d=window.location.pathname;document.querySelectorAll(".sub-menu").forEach(s=>{const t=s,r=t.querySelectorAll("a");let e=!1;if(r.forEach(n=>{n.getAttribute("href")===d&&(e=!0)}),e){t.style.maxHeight="400px";const n=t.getAttribute("data-submenu"),u=document.querySelector(`[data-menu-toggle="${n}"]`),o=document.querySelector(`[data-menu-item="${n}"]`);u&&(u.style.transform="rotate(180deg)"),o&&o.setAttribute("data-menu-expanded","true")}})});</script>
-
     <div class="flex flex-col min-h-dvh">
       <div class="bg-white fixed z-20 w-full right-0 p-4 lg:p-6 flex items-center gap-4 lg:w-[calc(100%-300px)] lg:ml-auto">
   <div class="flex-grow">
@@ -188,4 +188,8 @@
     </div>
   </div>
 
-	</body></html>
+
+		<script src="/src/js/replace-path.js"></script>
+		<script src="/src/js/sidebar.js"></script>
+	</body>
+</html>

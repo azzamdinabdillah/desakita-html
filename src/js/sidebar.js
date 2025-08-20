@@ -1,12 +1,63 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // Sidebar toggle button (if exists)
+  // Get sidebar element
+  const sidebar = document.querySelector('[class*="translate-x-0"]');
+
+  // Mobile sidebar toggle button (outside sidebar)
+  const mobileSidebarToggle = document.getElementById("sidebar-toggle");
+
+  // Desktop sidebar toggle button (inside sidebar)
   const sidebarToggleBtn = document.getElementById("toggle-sidebar");
-  if (sidebarToggleBtn) {
-    sidebarToggleBtn.addEventListener("click", function () {
-      // Dispatch a custom event to toggle the sidebar
-      window.dispatchEvent(new CustomEvent("toggleSidebar"));
+
+  // Function to toggle sidebar
+  function toggleSidebar() {
+    if (sidebar) {
+      const isOpen = !sidebar.classList.contains("-translate-x-full");
+      if (isOpen) {
+        // Close sidebar
+        sidebar.classList.add("-translate-x-full");
+        sidebar.classList.remove("translate-x-0");
+      } else {
+        // Open sidebar
+        sidebar.classList.remove("-translate-x-full");
+        sidebar.classList.add("translate-x-0");
+      }
+    }
+  }
+
+  // Mobile toggle button event listener
+  if (mobileSidebarToggle) {
+    mobileSidebarToggle.addEventListener("click", function () {
+      toggleSidebar();
     });
   }
+
+  // Desktop toggle button event listener
+  if (sidebarToggleBtn) {
+    sidebarToggleBtn.addEventListener("click", function () {
+      toggleSidebar();
+    });
+  }
+
+  // Close sidebar when clicking outside on mobile
+  document.addEventListener("click", function (event) {
+    if (window.innerWidth < 1024) {
+      // Only on mobile (lg breakpoint)
+      const isClickInsideSidebar = sidebar && sidebar.contains(event.target);
+      const isClickOnToggle =
+        (mobileSidebarToggle && mobileSidebarToggle.contains(event.target)) ||
+        (sidebarToggleBtn && sidebarToggleBtn.contains(event.target));
+
+      if (
+        !isClickInsideSidebar &&
+        !isClickOnToggle &&
+        sidebar &&
+        !sidebar.classList.contains("-translate-x-full")
+      ) {
+        sidebar.classList.add("-translate-x-full");
+        sidebar.classList.remove("translate-x-0");
+      }
+    }
+  });
 
   // Handle menu click events
   const menuItems = document.querySelectorAll(".menu");
@@ -44,6 +95,11 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       } else if (menuLink) {
         // Navigate to the link if no sub-menu
+        // Close sidebar on mobile after navigation
+        if (window.innerWidth < 1024 && sidebar) {
+          sidebar.classList.add("-translate-x-full");
+          sidebar.classList.remove("translate-x-0");
+        }
         window.location.href = menuLink;
       }
     });
@@ -77,4 +133,10 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     }
   });
+
+  // Initialize sidebar state for mobile
+  if (window.innerWidth < 1024 && sidebar) {
+    sidebar.classList.add("-translate-x-full");
+    sidebar.classList.remove("translate-x-0");
+  }
 });
