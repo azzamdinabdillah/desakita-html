@@ -98,6 +98,40 @@ table td:first-child {
   @apply rounded-l-2xl lg:rounded-l-3xl;
 }
 
+/* Custom styling for date input */
+input[type="date"] {
+  position: relative;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  background: transparent;
+  bottom: 0;
+  color: transparent;
+  cursor: pointer;
+  height: auto;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: auto;
+}
+
+input[type="date"]::-webkit-datetime-edit {
+  color: transparent;
+}
+
+input[type="date"]:focus::-webkit-datetime-edit {
+  color: #001b1a;
+}
+
+input[type="date"]:valid::-webkit-datetime-edit {
+  color: #001b1a;
+}
+
+input[type="date"].has-value::-webkit-datetime-edit {
+  color: #001b1a;
+}
+
 table td:last-child {
   @apply rounded-r-2xl lg:rounded-r-3xl;
 }
