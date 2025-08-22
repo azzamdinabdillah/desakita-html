@@ -20,6 +20,12 @@ class TabsManager {
 
     if (tabs.length === 0) return;
 
+    // Initialize first tab as active if no tab is currently active
+    const activeTab = container.querySelector('[aria-selected="true"]');
+    if (!activeTab && tabs.length > 0) {
+      this.switchTab(container, 0);
+    }
+
     // Add click event listeners to all tabs
     tabs.forEach((tab, index) => {
       tab.addEventListener("click", (e) => {
