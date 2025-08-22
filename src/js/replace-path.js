@@ -50,7 +50,7 @@ function replacePaths() {
       const newHref = PATH_CONFIG.PAGES_PREFIX + pathWithHtml;
       link.setAttribute("href", newHref);
       linkCount++;
-      console.log(`Link path diubah: ${href} -> ${newHref}`);
+      // console.log(`Link path diubah: ${href} -> ${newHref}`);
     }
   });
 
@@ -69,7 +69,7 @@ function replacePaths() {
       const newSrc = PATH_CONFIG.PUBLIC_PREFIX + src;
       img.setAttribute("src", newSrc);
       imageCount++;
-      console.log(`Image path diubah: ${src} -> ${newSrc}`);
+      // console.log(`Image path diubah: ${src} -> ${newSrc}`);
     }
   });
 
@@ -92,15 +92,15 @@ function replacePaths() {
       const newDataMenuLink = PATH_CONFIG.PAGES_PREFIX + pathWithHtml;
       element.setAttribute("data-menu-link", newDataMenuLink);
       dataMenuLinkCount++;
-      console.log(
-        `Data-menu-link path diubah: ${dataMenuLink} -> ${newDataMenuLink}`
-      );
+      // console.log(
+      //   `Data-menu-link path diubah: ${dataMenuLink} -> ${newDataMenuLink}`
+      // );
     }
   });
 
-  console.log(
-    `Proses pengubahan path selesai! Total: ${linkCount} link, ${imageCount} image, dan ${dataMenuLinkCount} data-menu-link diubah.`
-  );
+  // console.log(
+  //   `Proses pengubahan path selesai! Total: ${linkCount} link, ${imageCount} image, dan ${dataMenuLinkCount} data-menu-link diubah.`
+  // );
 }
 
 // Fungsi untuk mengubah path secara manual dengan parameter
@@ -131,7 +131,7 @@ function replacePathManually(selector, attribute, prefix) {
 
       element.setAttribute(attribute, newValue);
       count++;
-      console.log(`${attribute} path diubah: ${value} -> ${newValue}`);
+      // console.log(`${attribute} path diubah: ${value} -> ${newValue}`);
     }
   });
 
@@ -172,20 +172,20 @@ function replaceSpecificPaths() {
     PATH_CONFIG.PAGES_PREFIX
   );
 
-  console.log(
-    `Pengubahan path spesifik selesai! Total: ${linkCount} link, ${imageCount} image, dan ${dataMenuLinkCount} data-menu-link diubah.`
-  );
+  // console.log(
+  //   `Pengubahan path spesifik selesai! Total: ${linkCount} link, ${imageCount} image, dan ${dataMenuLinkCount} data-menu-link diubah.`
+  // );
 }
 
 // Fungsi untuk mengubah konfigurasi path secara dinamis
 function updatePathConfig(newPagesPrefix, newPublicPrefix) {
   if (newPagesPrefix) {
     PATH_CONFIG.PAGES_PREFIX = newPagesPrefix;
-    console.log(`Pages prefix diubah menjadi: ${newPagesPrefix}`);
+    // console.log(`Pages prefix diubah menjadi: ${newPagesPrefix}`);
   }
   if (newPublicPrefix) {
     PATH_CONFIG.PUBLIC_PREFIX = newPublicPrefix;
-    console.log(`Public prefix diubah menjadi: ${newPublicPrefix}`);
+    // console.log(`Public prefix diubah menjadi: ${newPublicPrefix}`);
   }
 }
 
