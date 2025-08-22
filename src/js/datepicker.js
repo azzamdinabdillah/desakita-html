@@ -39,6 +39,17 @@ function initializeDatepicker() {
       ageDisplay = findNearestAgeDisplay(dateInput);
     }
 
+    // Tambahkan event listener untuk focus dan blur untuk SEMUA datepicker
+    dateInput.addEventListener("focus", function () {
+      this.showPicker && this.showPicker();
+      this.classList.add("shadow-[0_0_0_2px]", "shadow-dark-green");
+    });
+
+    dateInput.addEventListener("blur", function () {
+      this.classList.remove("shadow-[0_0_0_2px]", "shadow-dark-green");
+    });
+
+    // Hanya tambahkan event listener untuk change dan input jika ada ageDisplay
     if (dateInput && ageDisplay) {
       // Tambahkan event listener untuk perubahan tanggal
       dateInput.addEventListener("change", function () {
@@ -62,11 +73,6 @@ function initializeDatepicker() {
           ageDisplay.textContent = "0";
           this.classList.remove("has-value");
         }
-      });
-
-      // Tambahkan event listener untuk focus (opsional - untuk UX yang lebih baik)
-      dateInput.addEventListener("focus", function () {
-        this.showPicker && this.showPicker();
       });
 
       // Tambahkan event listener untuk input (untuk real-time update)
