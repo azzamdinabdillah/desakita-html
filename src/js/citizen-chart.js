@@ -56,7 +56,30 @@ document.addEventListener("DOMContentLoaded", function () {
             display: false, // Sembunyikan legend karena sudah ada di HTML
           },
           tooltip: {
-            enabled: false, // Sembunyikan tooltip
+            enabled: true, // Aktifkan tooltip
+            backgroundColor: "rgba(0, 0, 0, 0.8)",
+            titleColor: "#ffffff",
+            bodyColor: "#ffffff",
+            titleFont: {
+              size: 14,
+              family: "Lexend Deca, sans-serif",
+            },
+            bodyFont: {
+              size: 12,
+              family: "Lexend Deca, sans-serif",
+            },
+            padding: 10,
+            cornerRadius: 6,
+            displayColors: true,
+            callbacks: {
+              label: function (context) {
+                const label = context.label || "";
+                const value = context.parsed;
+                const total = context.dataset.data.reduce((a, b) => a + b, 0);
+                const percentage = ((value / total) * 100).toFixed(1);
+                return `${label}: ${value} (${percentage}%)`;
+              },
+            },
           },
         },
         elements: {
