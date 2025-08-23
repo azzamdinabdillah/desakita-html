@@ -1243,6 +1243,11 @@
       max-width: 370px;
     }
   }
+  .md\:max-w-\[400px\] {
+    @media (width >= 48rem) {
+      max-width: 400px;
+    }
+  }
   .md\:flex-1 {
     @media (width >= 48rem) {
       flex: 1;

@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // Teks "Jumlah Penduduk"
         ctx.font = "14px Lexend Deca, sans-serif";
         ctx.fillStyle = "#6B7280"; // Secondary text color
-        ctx.fillText("Jumlah Penduduk", centerX, centerY + 15);
+        ctx.fillText("Total Population", centerX, centerY + 15);
 
         ctx.restore();
       },
@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const citizenChart = new Chart(ctx, {
       type: "doughnut",
       data: {
-        labels: ["Pria", "Wanita", "Anak-anak", "Balita"],
+        labels: ["Male", "Female", "Children", "Toddlers"],
         datasets: [
           {
             data: [400, 300, 300, 500],

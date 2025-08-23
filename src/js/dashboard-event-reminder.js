@@ -42,15 +42,15 @@ class DashboardEventReminder {
     const eventDate2 = new Date(this.dates[4]);
 
     this.events[this.formatDate(eventDate1)] = {
-      name: "Belajar Coding Bersama",
-      time: "11:30 WIB",
+      name: "Learn Coding Together",
+      time: "11:30 AM",
       image:
         "https://images.unsplash.com/photo-1513258496099-48168024aec0?auto=format&fit=crop&w=600&q=80",
     };
 
     this.events[this.formatDate(eventDate2)] = {
-      name: "Rapat Koordinasi Desa",
-      time: "14:00 WIB",
+      name: "Village Coordination Meeting",
+      time: "2:00 PM",
       image:
         "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80",
     };
