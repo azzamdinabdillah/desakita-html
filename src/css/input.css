@@ -143,3 +143,31 @@ table td:last-child {
 .tabpanel:not(.react-tabs__tab-panel--selected) {
   display: none;
 }
+
+/* Custom styles for event reminder */
+.date-with-event {
+  position: relative;
+}
+.date-with-event::after {
+  content: "";
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  width: 8px;
+  height: 8px;
+  background-color: #fbad4a;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+.selected-date {
+  transform: scale(1.05);
+}
+.calendar-navigation:hover {
+  transform: scale(1.1);
+}
+.event-navigation:hover {
+  transform: scale(1.1);
+}
+#event-container > div {
+  transition: opacity 0.3s ease-in-out;
+}
