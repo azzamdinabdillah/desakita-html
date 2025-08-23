@@ -1,221 +1,654 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width">
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg">
-		<meta name="generator" content="Astro v5.13.2">
-		<title>Astro Basics</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content="Astro v5.13.2" />
+    <title>Astro Basics</title>
 
-		<link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
 
-	<link rel="stylesheet" href="/src/css/output.css">
-	<link rel="stylesheet" href="/_astro/dashboard.GspUITdP.css"></head>
-	<body>
-		
-  <div>
-    <div class="translate-x-0 lg:translate-0 bg-black/15 transition-all fixed z-20 h-dvh w-[100vw] lg:w-[300px]">
-  <div class="bg-white z-10 p-6 lg:py-[30px] h-full overflow-y-auto no-scrollbar scroll ml-auto w-[100vw] lg:w-[300px] gap-6 flex flex-col">
-    <div class="top">
-      <div class="flex justify-between items-center">
-        <div class="flex items-center gap-3">
-          <img src="/icons/logo.svg" alt="">
-          <h1 class="text-2xl font-bold leading-normal text-black">
-            DesaKita.
-          </h1>
-        </div>
-        <!-- <button
+    <link rel="stylesheet" href="/src/css/output.css" />
+    <link rel="stylesheet" href="/_astro/dashboard.GspUITdP.css" />
+  </head>
+  <body>
+    <div>
+      <div
+        class="translate-x-0 lg:translate-0 bg-black/15 transition-all fixed z-20 h-dvh w-[100vw] lg:w-[300px]"
+      >
+        <div
+          class="bg-white z-10 p-6 lg:py-[30px] h-full overflow-y-auto no-scrollbar scroll ml-auto w-[100vw] lg:w-[300px] gap-6 flex flex-col"
+        >
+          <div class="top">
+            <div class="flex justify-between items-center">
+              <div class="flex items-center gap-3">
+                <img src="/icons/logo.svg" alt="" />
+                <h1 class="text-2xl font-bold leading-normal text-black">
+                  DesaKita.
+                </h1>
+              </div>
+              <!-- <button
           id="toggle-sidebar"
           class="w-11 rounded-2xl border border-bg-color p-1.5"
         >
           <img src="/icons/menu.svg" alt="" />
         </button> -->
-      </div>
-    </div>
-
-    <div class="main-menu flex flex-col gap-2">
-      <h2 class="text-sm font-medium leading-normal text-secondary-text-color">
-        Main Menu
-      </h2>
-
-      <div class="menu group hover:bg-foreshadow rounded-2xl cursor-pointer transition-all text-base text-secondary-text-color font-normal leading-normal bg-foreshadow" data-menu-item="Dashboard" data-menu-link="/head-village/dashboard/dashboard.html" data-menu-expanded="false">
-            <div class="flex justify-between items-center p-4">
-              <div class="gap-2 flex items-center">
-                <img src="/icons/menu-dashboard.svg" alt="">
-                <h3 class="text-dark-green font-medium group-hover:text-dark-green group-hover:font-medium">
-                  Dashboard
-                </h3>
-              </div>
-              
             </div>
-            
-          </div><div class="menu group hover:bg-foreshadow rounded-2xl cursor-pointer transition-all text-base text-secondary-text-color font-normal leading-normal bg-foreshadow" data-menu-item="Head House" data-menu-link="/head-village/head-house/head-house.html" data-menu-expanded="false">
-            <div class="flex justify-between items-center p-4">
-              <div class="gap-2 flex items-center">
-                <img src="/icons/menu-kepala-rumah.svg" alt="">
-                <h3 class="text-dark-green font-medium group-hover:text-dark-green group-hover:font-medium">
-                  Head House
-                </h3>
-              </div>
-              
-            </div>
-            
-          </div><div class="menu group hover:bg-foreshadow rounded-2xl cursor-pointer transition-all text-base text-secondary-text-color font-normal leading-normal " data-menu-item="Social Donate" data-has-submenu="true" data-menu-link data-menu-expanded="true">
-            <div class="flex justify-between items-center p-4">
-              <div class="gap-2 flex items-center">
-                <img src="/icons/menu-bansos.svg" alt="">
-                <h3 class=" group-hover:text-dark-green group-hover:font-medium">
-                  Social Donate
-                </h3>
-              </div>
-              <img src="/icons/dropdown-menu-sidebar.svg" alt="" class="transition-all" data-menu-toggle="Social Donate">
-            </div>
-            <div class="sub-menu overflow-hidden transition-all ml-7 relative before:absolute before:top-0 before:left-0 before:w-0.5 before:h-[70%] before:bg-[#F2F9F6]" data-submenu="Social Donate" style="max-height: 400px">
-                <a href="/head-village/social-donate/list-social-donate/list-social-donate.html" class="inline-block w-full">
-                      <div class="relative">
-                        <img src="/icons/line-sub-menu.svg" class="absolute left-0 top-1" alt="">
-                        <p class="bg-transparent font-normal text-secondary-text-color py-4 ml-8 pl-4 rounded-2xl">
-                          List
-                        </p>
-                      </div>
-                    </a><a href="/head-village/social-donate/applicant-social-donate/applicant-social-donate.html" class="inline-block w-full">
-                      <div class="relative">
-                        <img src="/icons/line-sub-menu.svg" class="absolute left-0 top-1" alt="">
-                        <p class="bg-transparent font-normal text-secondary-text-color py-4 ml-8 pl-4 rounded-2xl">
-                          Application
-                        </p>
-                      </div>
-                    </a>
-              </div>
-          </div><div class="menu group hover:bg-foreshadow rounded-2xl cursor-pointer transition-all text-base text-secondary-text-color font-normal leading-normal " data-menu-item="Village Schedule" data-has-submenu="true" data-menu-link data-menu-expanded="true">
-            <div class="flex justify-between items-center p-4">
-              <div class="gap-2 flex items-center">
-                <img src="/icons/menu-jadwal.svg" alt="">
-                <h3 class=" group-hover:text-dark-green group-hover:font-medium">
-                  Village Schedule
-                </h3>
-              </div>
-              <img src="/icons/dropdown-menu-sidebar.svg" alt="" class="transition-all" data-menu-toggle="Village Schedule">
-            </div>
-            <div class="sub-menu overflow-hidden transition-all ml-7 relative before:absolute before:top-0 before:left-0 before:w-0.5 before:h-[70%] before:bg-[#F2F9F6]" data-submenu="Village Schedule" style="max-height: 400px">
-                <a href="/head-village/village-schedule/village-development-schedule/village-development-schedule.html" class="inline-block w-full">
-                      <div class="relative">
-                        <img src="/icons/line-sub-menu.svg" class="absolute left-0 top-1" alt="">
-                        <p class="bg-transparent font-normal text-secondary-text-color py-4 ml-8 pl-4 rounded-2xl">
-                          Development
-                        </p>
-                      </div>
-                    </a><a href="/head-village/village-schedule/village-event-schedule/village-event-schedule.html" class="inline-block w-full">
-                      <div class="relative">
-                        <img src="/icons/line-sub-menu.svg" class="absolute left-0 top-1" alt="">
-                        <p class="bg-transparent font-normal text-secondary-text-color py-4 ml-8 pl-4 rounded-2xl">
-                          Village Event
-                        </p>
-                      </div>
-                    </a>
-              </div>
-          </div><div class="menu group hover:bg-foreshadow rounded-2xl cursor-pointer transition-all text-base text-secondary-text-color font-normal leading-normal bg-foreshadow" data-menu-item="Village Profile" data-menu-link="/head-village/village-profile/village-profile.html" data-menu-expanded="false">
-            <div class="flex justify-between items-center p-4">
-              <div class="gap-2 flex items-center">
-                <img src="/icons/menu-profile.svg" alt="">
-                <h3 class="text-dark-green font-medium group-hover:text-dark-green group-hover:font-medium">
-                  Village Profile
-                </h3>
-              </div>
-              
-            </div>
-            
-          </div><div class="menu group hover:bg-foreshadow rounded-2xl cursor-pointer transition-all text-base text-secondary-text-color font-normal leading-normal " data-menu-item="Head Family Role Page" data-menu-link="/head-family/dashboard/dashboard.html" data-menu-expanded="false">
-            <div class="flex justify-between items-center p-4">
-              <div class="gap-2 flex items-center">
-                <img src="/icons/menu-profile.svg" alt="">
-                <h3 class=" group-hover:text-dark-green group-hover:font-medium">
-                  Head Family Role Page
-                </h3>
-              </div>
-              
-            </div>
-            
-          </div><div class="menu group hover:bg-foreshadow rounded-2xl cursor-pointer transition-all text-base text-secondary-text-color font-normal leading-normal " data-menu-item="Logout" data-menu-link="/index.html" data-menu-expanded="false">
-            <div class="flex justify-between items-center p-4">
-              <div class="gap-2 flex items-center">
-                <img src="/icons/menu-profile.svg" alt="">
-                <h3 class=" group-hover:text-dark-green group-hover:font-medium">
-                  Logout
-                </h3>
-              </div>
-              
-            </div>
-            
           </div>
-    </div>
-  </div>
-</div>
 
-<script type="module">document.addEventListener("DOMContentLoaded",function(){const m=document.getElementById("toggle-sidebar");m&&m.addEventListener("click",function(){window.dispatchEvent(new CustomEvent("toggleSidebar"))}),document.querySelectorAll(".menu").forEach(s=>{s.addEventListener("click",function(t){const r=t.target,e=t.currentTarget;if(r.closest(".sub-menu"))return;const n=e.getAttribute("data-has-submenu")==="true",u=e.getAttribute("data-menu-link"),o=e.getAttribute("data-menu-item");if(n){const a=document.querySelector(`[data-submenu="${o}"]`),i=e.querySelector(`[data-menu-toggle="${o}"]`);if(a&&i){const c=a.style.maxHeight&&a.style.maxHeight!=="0px";a.style.maxHeight=c?"0px":"400px",i.style.transform=c?"rotate(0deg)":"rotate(180deg)",e.setAttribute("data-menu-expanded",(!c).toString())}}else u&&(window.location.href=u)})});const d=window.location.pathname;document.querySelectorAll(".sub-menu").forEach(s=>{const t=s,r=t.querySelectorAll("a");let e=!1;if(r.forEach(n=>{n.getAttribute("href")===d&&(e=!0)}),e){t.style.maxHeight="400px";const n=t.getAttribute("data-submenu"),u=document.querySelector(`[data-menu-toggle="${n}"]`),o=document.querySelector(`[data-menu-item="${n}"]`);u&&(u.style.transform="rotate(180deg)"),o&&o.setAttribute("data-menu-expanded","true")}})});</script>
+          <div class="main-menu flex flex-col gap-2">
+            <h2
+              class="text-sm font-medium leading-normal text-secondary-text-color"
+            >
+              Main Menu
+            </h2>
 
-    <div class="flex flex-col min-h-dvh">
-      <div class="bg-white fixed z-20 w-full right-0 p-4 lg:p-6 flex items-center gap-4 lg:w-[calc(100%-300px)] lg:ml-auto">
-  <div class="flex-grow">
-    <div class="relative w-full">
-      <div class="absolute left-4 top-1/2 -translate-y-1/2 w-5 lg:w-6">
-        <img src="/search-normal.svg" alt="icons">
+            <div
+              class="menu group hover:bg-foreshadow rounded-2xl cursor-pointer transition-all text-base text-secondary-text-color font-normal leading-normal bg-foreshadow"
+              data-menu-item="Dashboard"
+              data-menu-link="/head-village/dashboard/dashboard.html"
+              data-menu-expanded="false"
+            >
+              <div class="flex justify-between items-center p-4">
+                <div class="gap-2 flex items-center">
+                  <img src="/icons/menu-dashboard.svg" alt="" />
+                  <h3
+                    class="text-dark-green font-medium group-hover:text-dark-green group-hover:font-medium"
+                  >
+                    Dashboard
+                  </h3>
+                </div>
+              </div>
+            </div>
+            <div
+              class="menu group hover:bg-foreshadow rounded-2xl cursor-pointer transition-all text-base text-secondary-text-color font-normal leading-normal bg-foreshadow"
+              data-menu-item="Head House"
+              data-menu-link="/head-village/head-house/head-house.html"
+              data-menu-expanded="false"
+            >
+              <div class="flex justify-between items-center p-4">
+                <div class="gap-2 flex items-center">
+                  <img src="/icons/menu-kepala-rumah.svg" alt="" />
+                  <h3
+                    class="text-dark-green font-medium group-hover:text-dark-green group-hover:font-medium"
+                  >
+                    Head House
+                  </h3>
+                </div>
+              </div>
+            </div>
+            <div
+              class="menu group hover:bg-foreshadow rounded-2xl cursor-pointer transition-all text-base text-secondary-text-color font-normal leading-normal"
+              data-menu-item="Social Donate"
+              data-has-submenu="true"
+              data-menu-link
+              data-menu-expanded="true"
+            >
+              <div class="flex justify-between items-center p-4">
+                <div class="gap-2 flex items-center">
+                  <img src="/icons/menu-bansos.svg" alt="" />
+                  <h3
+                    class="group-hover:text-dark-green group-hover:font-medium"
+                  >
+                    Social Donate
+                  </h3>
+                </div>
+                <img
+                  src="/icons/dropdown-menu-sidebar.svg"
+                  alt=""
+                  class="transition-all"
+                  data-menu-toggle="Social Donate"
+                />
+              </div>
+              <div
+                class="sub-menu overflow-hidden transition-all ml-7 relative before:absolute before:top-0 before:left-0 before:w-0.5 before:h-[70%] before:bg-[#F2F9F6]"
+                data-submenu="Social Donate"
+                style="max-height: 400px"
+              >
+                <a
+                  href="/head-village/social-donate/list-social-donate/list-social-donate.html"
+                  class="inline-block w-full"
+                >
+                  <div class="relative">
+                    <img
+                      src="/icons/line-sub-menu.svg"
+                      class="absolute left-0 top-1"
+                      alt=""
+                    />
+                    <p
+                      class="bg-transparent font-normal text-secondary-text-color py-4 ml-8 pl-4 rounded-2xl"
+                    >
+                      List
+                    </p>
+                  </div> </a
+                ><a
+                  href="/head-village/social-donate/applicant-social-donate/applicant-social-donate.html"
+                  class="inline-block w-full"
+                >
+                  <div class="relative">
+                    <img
+                      src="/icons/line-sub-menu.svg"
+                      class="absolute left-0 top-1"
+                      alt=""
+                    />
+                    <p
+                      class="bg-transparent font-normal text-secondary-text-color py-4 ml-8 pl-4 rounded-2xl"
+                    >
+                      Application
+                    </p>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div
+              class="menu group hover:bg-foreshadow rounded-2xl cursor-pointer transition-all text-base text-secondary-text-color font-normal leading-normal"
+              data-menu-item="Village Schedule"
+              data-has-submenu="true"
+              data-menu-link
+              data-menu-expanded="true"
+            >
+              <div class="flex justify-between items-center p-4">
+                <div class="gap-2 flex items-center">
+                  <img src="/icons/menu-jadwal.svg" alt="" />
+                  <h3
+                    class="group-hover:text-dark-green group-hover:font-medium"
+                  >
+                    Village Schedule
+                  </h3>
+                </div>
+                <img
+                  src="/icons/dropdown-menu-sidebar.svg"
+                  alt=""
+                  class="transition-all"
+                  data-menu-toggle="Village Schedule"
+                />
+              </div>
+              <div
+                class="sub-menu overflow-hidden transition-all ml-7 relative before:absolute before:top-0 before:left-0 before:w-0.5 before:h-[70%] before:bg-[#F2F9F6]"
+                data-submenu="Village Schedule"
+                style="max-height: 400px"
+              >
+                <a
+                  href="/head-village/village-schedule/village-development-schedule/village-development-schedule.html"
+                  class="inline-block w-full"
+                >
+                  <div class="relative">
+                    <img
+                      src="/icons/line-sub-menu.svg"
+                      class="absolute left-0 top-1"
+                      alt=""
+                    />
+                    <p
+                      class="bg-transparent font-normal text-secondary-text-color py-4 ml-8 pl-4 rounded-2xl"
+                    >
+                      Development
+                    </p>
+                  </div> </a
+                ><a
+                  href="/head-village/village-schedule/village-event-schedule/village-event-schedule.html"
+                  class="inline-block w-full"
+                >
+                  <div class="relative">
+                    <img
+                      src="/icons/line-sub-menu.svg"
+                      class="absolute left-0 top-1"
+                      alt=""
+                    />
+                    <p
+                      class="bg-transparent font-normal text-secondary-text-color py-4 ml-8 pl-4 rounded-2xl"
+                    >
+                      Village Event
+                    </p>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div
+              class="menu group hover:bg-foreshadow rounded-2xl cursor-pointer transition-all text-base text-secondary-text-color font-normal leading-normal bg-foreshadow"
+              data-menu-item="Village Profile"
+              data-menu-link="/head-village/village-profile/village-profile.html"
+              data-menu-expanded="false"
+            >
+              <div class="flex justify-between items-center p-4">
+                <div class="gap-2 flex items-center">
+                  <img src="/icons/menu-profile.svg" alt="" />
+                  <h3
+                    class="text-dark-green font-medium group-hover:text-dark-green group-hover:font-medium"
+                  >
+                    Village Profile
+                  </h3>
+                </div>
+              </div>
+            </div>
+            <div
+              class="menu group hover:bg-foreshadow rounded-2xl cursor-pointer transition-all text-base text-secondary-text-color font-normal leading-normal"
+              data-menu-item="Head Family Role Page"
+              data-menu-link="/head-family/dashboard/dashboard.html"
+              data-menu-expanded="false"
+            >
+              <div class="flex justify-between items-center p-4">
+                <div class="gap-2 flex items-center">
+                  <img src="/icons/menu-profile.svg" alt="" />
+                  <h3
+                    class="group-hover:text-dark-green group-hover:font-medium"
+                  >
+                    Head Family Role Page
+                  </h3>
+                </div>
+              </div>
+            </div>
+            <div
+              class="menu group hover:bg-foreshadow rounded-2xl cursor-pointer transition-all text-base text-secondary-text-color font-normal leading-normal"
+              data-menu-item="Logout"
+              data-menu-link="/index.html"
+              data-menu-expanded="false"
+            >
+              <div class="flex justify-between items-center p-4">
+                <div class="gap-2 flex items-center">
+                  <img src="/icons/menu-profile.svg" alt="" />
+                  <h3
+                    class="group-hover:text-dark-green group-hover:font-medium"
+                  >
+                    Logout
+                  </h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <input type="text" class="pl-11 lg:pl-12 w-full text-black appearance-none font-medium focus:border-1.5 focus:border-dark-green outline-none transition-all rounded-2xl border border-bg-color p-3 lg:p-4 text-sm lg:text-base placeholder:text-secondary-text-color placeholder:font-medium placeholder:text-sm lg:placeholder:text-base placeholder:leading-normal rounded-full" placeholder="Search for resident name, application, events, etc">
-    </div>
-  </div>
-  
-  <img src="/icons/notification.svg" alt="" class="w-14 lg:w-15 rounded-2xl border border-bg-color p-1.5 lg:p-4 hidden lg:block">
-  
-  <img src="/icons/setting-2.svg" alt="" class="w-14 lg:w-15 rounded-2xl border border-bg-color p-1.5 lg:p-4 hidden lg:block">
-  
-  <div class="hidden lg:flex gap-4 items-center">
-    <a href="/login" class="image bg-[#F1FAE6] rounded-full overflow-hidden w-[56px] h-[56px]">
-      <img src="/images/user.png" alt="" class="w-full h-full">
-    </a>
-    <div class="gap-[6px] flex flex-col w-[120px]">
-      <h5 class="w-full text-base text-black font-semibold leading-normal">
-        Bimore W
-      </h5>
-      <h6 class="w-full whitespace-nowrap text-sm font-medium leading-normal text-secondary-text-color">
-        Village Head
-      </h6>
-    </div>
-    <a href="/index.html">
-      <img src="/icons/logout.svg" alt="">
-    </a>
-  </div>
-  
-  <div>
-    <a href="/login">
-      <div class="image bg-[#F1FAE6] rounded-full overflow-hidden lg:hidden">
-        <img src="/images/user.png" alt="">
-      </div>
-    </a>
-  </div>
-  
-  <img id="sidebar-toggle" src="/icons/menu.svg" alt="" class="w-14 lg:w-16 rounded-2xl border border-bg-color p-1.5 lg:p-2.5 lg:hidden cursor-pointer">
-</div>
-      <div class="p-4 md:p-6 lg:w-[calc(100%-300px)] lg:ml-auto flex-1 mt-22 lg:mt-28">
-        
-  <link rel="preload" as="image" href="/images/placeholder-upload-thumbnail-bansos.png"/><link rel="preload" as="image" href="/icons/send-square.svg"/><link rel="preload" as="image" href="/icons/edit-plain.svg"/><link rel="preload" as="image" href="/icons/bag-2-plain.svg"/><link rel="preload" as="image" href="/icons/money-plain.svg"/><link rel="preload" as="image" href="/icons/gas-station.svg"/><link rel="preload" as="image" href="/icons/health.svg"/><link rel="preload" as="image" href="/icons/dollar-square.svg"/><link rel="preload" as="image" href="/icons/user-square.svg"/><link rel="preload" as="image" href="/icons/tick-circle.svg"/><link rel="preload" as="image" href="/icons/close-circle-2.svg"/><div class="flex-wrapper"><div class="flex justify-between items-center flex-wrap gap-3"><div class="gap-1 lg:gap-2 flex flex-col"><div class="text-secondary-text-color font-normal text-sm lg:text-base capitalize"><p>Social Donate  <span class="text-dark-green font-medium">/  add Social Donate</span></p></div><h1 class="text-xl lg:text-2xl text-black font-semibold">Add Social Donate</h1></div></div><div class="p-5 lg:p-6 bg-white rounded-2xl w-full gap-5 lg:gap-6 flex flex-col undefined"><form class="flex-wrapper"><div class="grid grid-cols-1 md:grid-cols-5 gap-2 md:justify-between items-center"><label for="village-name" class="text-secondary-text-color font-semibold text-sm lg:text-base leading-normal col-span-2">Social Donate Thumbnail</label><div class="flex items-center justify-between w-full col-span-3"><img src="/images/placeholder-upload-thumbnail-bansos.png" alt="" class="w-[100px] md:w-[120px] h-[80px] md:h-[100px] rounded-3xl object-cover"/><button type="button" class="flex cursor-pointer justify-center hover:opacity-80 items-center gap-2.5 py-3 px-4 lg:py-4 lg:px-6 rounded-xl lg:rounded-2xl text-sm lg:text-base font-medium leading-normal bg-black text-white undefined"><img src="/icons/send-square.svg" alt=""/>Upload</button><input type="file" hidden="" id="upload-profile-image"/></div></div><hr/><div class="grid grid-cols-1 md:grid-cols-5 gap-2 md:justify-between items-center"><label for="head-name" class="text-secondary-text-color font-semibold text-sm lg:text-base leading-normal col-span-2">Social Donate Name</label><div class="col-span-3"><div class="relative w-full"><div class="absolute left-4 top-1/2 -translate-y-1/2 w-5 lg:w-6"><img src="/icons/edit-plain.svg" alt="icons"/></div><input id="head-name" type="text" class="pl-11 lg:pl-12 w-full text-black appearance-none font-medium focus:shadow-[0_0_0_2px] focus:shadow-dark-green outline-none transition-all rounded-2xl border border-bg-color p-3 lg:p-4 text-sm lg:text-base placeholder:text-secondary-text-color placeholder:font-medium placeholder:text-sm lg:placeholder:text-base placeholder:leading-normal undefined" placeholder="Determine Social Donate name"/></div></div></div><hr/><div class="grid grid-cols-1 md:grid-cols-5 gap-2 md:justify-between items-center"><label for="village-total-citizen" class="text-secondary-text-color font-semibold text-sm lg:text-base leading-normal col-span-2">Choose Category Option</label><div class="col-span-3"><div class="flex flex-wrap gap-3 md:gap-6 "><label for="main-material" class="label-radio label-input-radio md:flex-[40%]"><div class="flex gap-2"><input type="radio" id="main-material" class="input-radio-choose-gender" name="head-gender"/>Basic Necessities</div><img src="/icons/bag-2-plain.svg" alt="" class="w-5 md:w-6"/></label><label for="money" class="label-radio label-input-radio md:flex-[40%]"><div class="flex gap-2"><input type="radio" id="money" class="input-radio-choose-gender" name="head-gender"/>Cash</div><img src="/icons/money-plain.svg" alt="" class="w-5 md:w-6"/></label><label for="gas" class="label-radio label-input-radio md:flex-[40%]"><div class="flex gap-2"><input type="radio" id="gas" class="input-radio-choose-gender" name="head-gender"/>Subsidized Fuel</div><img src="/icons/gas-station.svg" alt="" class="w-5 md:w-6"/></label><label for="health" class="label-radio label-input-radio md:flex-[40%]"><div class="flex gap-2"><input type="radio" id="health" class="input-radio-choose-gender" name="head-gender"/>Healthcare</div><img src="/icons/health.svg" alt="" class="w-5 md:w-6"/></label></div></div></div><hr/><div class="grid grid-cols-1 md:grid-cols-5 gap-2 md:justify-between items-center"><label for="head-email" class="text-secondary-text-color font-semibold text-sm lg:text-base leading-normal col-span-2">Assistance Amount</label><div class="col-span-3"><div class="relative w-full"><div class="absolute left-4 top-1/2 -translate-y-1/2 w-5 lg:w-6"><img src="/icons/dollar-square.svg" alt="icons"/></div><input id="head-email" type="number" class="pl-11 lg:pl-12 w-full text-black appearance-none font-medium focus:shadow-[0_0_0_2px] focus:shadow-dark-green outline-none transition-all rounded-2xl border border-bg-color p-3 lg:p-4 text-sm lg:text-base placeholder:text-secondary-text-color placeholder:font-medium placeholder:text-sm lg:placeholder:text-base placeholder:leading-normal undefined" placeholder="Type assistance amount"/></div></div></div><hr/><div class="grid grid-cols-1 md:grid-cols-5 gap-2 md:justify-between items-center"><label for="head-pw" class="text-secondary-text-color font-semibold text-sm lg:text-base leading-normal col-span-2">Assistance Provider Name</label><div class="col-span-3"><div class="relative w-full"><div class="absolute left-4 top-1/2 -translate-y-1/2 w-5 lg:w-6"><img src="/icons/user-square.svg" alt="icons"/></div><input id="head-pw" type="text" class="pl-11 lg:pl-12 w-full text-black appearance-none font-medium focus:shadow-[0_0_0_2px] focus:shadow-dark-green outline-none transition-all rounded-2xl border border-bg-color p-3 lg:p-4 text-sm lg:text-base placeholder:text-secondary-text-color placeholder:font-medium placeholder:text-sm lg:placeholder:text-base placeholder:leading-normal undefined" placeholder="Type person or organization name"/></div></div></div><hr/><div class="grid grid-cols-1 md:grid-cols-5 gap-2 md:justify-between items-center"><label for="village-location" class="text-secondary-text-color font-semibold text-sm lg:text-base leading-normal col-span-2">Social Donate Description</label><div class="col-span-3"><div class="relative w-full"><textarea rows="5" id="village-location" class=" w-full text-black appearance-none font-medium focus:shadow-[0_0_0_2px] focus:shadow-dark-green outline-none transition-all rounded-2xl border border-bg-color p-3 lg:p-4 text-sm lg:text-base placeholder:text-secondary-text-color placeholder:font-medium placeholder:text-sm lg:placeholder:text-base placeholder:leading-normal undefined" placeholder="Explain more details about the assistance"></textarea></div></div></div><hr/><div class="grid grid-cols-1 md:grid-cols-5 gap-2 md:justify-between items-center"><label for="choose-is-available" class="text-secondary-text-color font-semibold text-sm lg:text-base leading-normal col-span-2">Choose Category Option</label><div class="col-span-3"><div class="flex flex-wrap gap-3 md:gap-6 "><label for="available" class="label-radio label-input-radio md:flex-1"><div class="flex gap-2"><input type="radio" id="available" class="input-radio-choose-gender" name="is-available"/>Available</div><img src="/icons/tick-circle.svg" alt="" class="w-5 md:w-6"/></label><label for="not-available" class="label-radio label-input-radio md:flex-1"><div class="flex gap-2"><input type="radio" id="not-available" class="input-radio-choose-gender" name="is-available"/>Not Available</div><img src="/icons/close-circle-2.svg" alt="" class="w-5 md:w-6"/></label></div></div></div><hr/><div class="flex justify-end gap-3"><button type="button" class="flex cursor-pointer justify-center hover:opacity-80 items-center gap-2.5 py-3 px-4 lg:py-4 lg:px-6 rounded-xl lg:rounded-2xl text-sm lg:text-base font-medium leading-normal bg-[#FF5070] text-white undefined">Cancel, Don&#x27;t proceed</button><button type="button" class="flex cursor-pointer justify-center hover:opacity-80 items-center gap-2.5 py-3 px-4 lg:py-4 lg:px-6 rounded-xl lg:rounded-2xl text-sm lg:text-base font-medium leading-normal bg-dark-green text-white undefined">Create Now</button></div></form></div></div>
 
+      <div class="flex flex-col min-h-dvh">
+        <div
+          class="bg-white fixed z-20 w-full right-0 p-4 lg:p-6 flex items-center gap-4 lg:w-[calc(100%-300px)] lg:ml-auto"
+        >
+          <div class="flex-grow">
+            <div class="relative w-full">
+              <div class="absolute left-4 top-1/2 -translate-y-1/2 w-5 lg:w-6">
+                <img src="/search-normal.svg" alt="icons" />
+              </div>
+              <input
+                type="text"
+                class="pl-11 lg:pl-12 w-full text-black appearance-none font-medium focus:border-1.5 focus:border-dark-green outline-none transition-all rounded-2xl border border-bg-color p-3 lg:p-4 text-sm lg:text-base placeholder:text-secondary-text-color placeholder:font-medium placeholder:text-sm lg:placeholder:text-base placeholder:leading-normal rounded-full"
+                placeholder="Search for resident name, application, events, etc"
+              />
+            </div>
+          </div>
+
+          <img
+            src="/icons/notification.svg"
+            alt=""
+            class="w-14 lg:w-15 rounded-2xl border border-bg-color p-1.5 lg:p-4 hidden lg:block"
+          />
+
+          <img
+            src="/icons/setting-2.svg"
+            alt=""
+            class="w-14 lg:w-15 rounded-2xl border border-bg-color p-1.5 lg:p-4 hidden lg:block"
+          />
+
+          <div class="hidden lg:flex gap-4 items-center">
+            <a
+              href="/login"
+              class="image bg-[#F1FAE6] rounded-full overflow-hidden w-[56px] h-[56px]"
+            >
+              <img src="/images/user.png" alt="" class="w-full h-full" />
+            </a>
+            <div class="gap-[6px] flex flex-col w-[120px]">
+              <h5
+                class="w-full text-base text-black font-semibold leading-normal"
+              >
+                Bimore W
+              </h5>
+              <h6
+                class="w-full whitespace-nowrap text-sm font-medium leading-normal text-secondary-text-color"
+              >
+                Village Head
+              </h6>
+            </div>
+            <a href="/index.html">
+              <img src="/icons/logout.svg" alt="" />
+            </a>
+          </div>
+
+          <div>
+            <a href="/login">
+              <div
+                class="image bg-[#F1FAE6] rounded-full overflow-hidden lg:hidden"
+              >
+                <img src="/images/user.png" alt="" />
+              </div>
+            </a>
+          </div>
+
+          <img
+            id="sidebar-toggle"
+            src="/icons/menu.svg"
+            alt=""
+            class="w-14 lg:w-16 rounded-2xl border border-bg-color p-1.5 lg:p-2.5 lg:hidden cursor-pointer"
+          />
+        </div>
+        <div
+          class="p-4 md:p-6 lg:w-[calc(100%-300px)] lg:ml-auto flex-1 mt-22 lg:mt-28"
+        >
+          <link
+            rel="preload"
+            as="image"
+            href="/images/placeholder-upload-thumbnail-bansos.png"
+          /><link rel="preload" as="image" href="/icons/send-square.svg" /><link
+            rel="preload"
+            as="image"
+            href="/icons/edit-plain.svg"
+          /><link rel="preload" as="image" href="/icons/bag-2-plain.svg" /><link
+            rel="preload"
+            as="image"
+            href="/icons/money-plain.svg"
+          /><link rel="preload" as="image" href="/icons/gas-station.svg" /><link
+            rel="preload"
+            as="image"
+            href="/icons/health.svg"
+          /><link
+            rel="preload"
+            as="image"
+            href="/icons/dollar-square.svg"
+          /><link rel="preload" as="image" href="/icons/user-square.svg" /><link
+            rel="preload"
+            as="image"
+            href="/icons/tick-circle.svg"
+          /><link rel="preload" as="image" href="/icons/close-circle-2.svg" />
+          <div class="flex-wrapper">
+            <div class="flex justify-between items-center flex-wrap gap-3">
+              <div class="gap-1 lg:gap-2 flex flex-col">
+                <div
+                  class="text-secondary-text-color font-normal text-sm lg:text-base capitalize"
+                >
+                  <p>
+                    Social Donate  <span class="text-dark-green font-medium"
+                      >/  add Social Donate</span
+                    >
+                  </p>
+                </div>
+                <h1 class="text-xl lg:text-2xl text-black font-semibold">
+                  Add Social Donate
+                </h1>
+              </div>
+            </div>
+            <div
+              class="p-5 lg:p-6 bg-white rounded-2xl w-full gap-5 lg:gap-6 flex flex-col undefined"
+            >
+              <form class="flex-wrapper">
+                <div
+                  class="grid grid-cols-1 md:grid-cols-5 gap-2 md:justify-between items-center"
+                >
+                  <label
+                    for="village-name"
+                    class="text-secondary-text-color font-semibold text-sm lg:text-base leading-normal col-span-2"
+                    >Social Donate Thumbnail</label
+                  >
+                  <div
+                    class="flex items-center justify-between w-full col-span-3"
+                  >
+                    <img
+                      src="/images/placeholder-upload-thumbnail-bansos.png"
+                      alt=""
+                      class="w-[100px] md:w-[120px] h-[80px] md:h-[100px] rounded-3xl object-cover"
+                    /><button
+                      type="button"
+                      class="flex cursor-pointer justify-center hover:opacity-80 items-center gap-2.5 py-3 px-4 lg:py-4 lg:px-6 rounded-xl lg:rounded-2xl text-sm lg:text-base font-medium leading-normal bg-black text-white undefined"
+                    >
+                      <img src="/icons/send-square.svg" alt="" />Upload</button
+                    ><input type="file" hidden="" id="upload-profile-image" />
+                  </div>
+                </div>
+                <hr />
+                <div
+                  class="grid grid-cols-1 md:grid-cols-5 gap-2 md:justify-between items-center"
+                >
+                  <label
+                    for="head-name"
+                    class="text-secondary-text-color font-semibold text-sm lg:text-base leading-normal col-span-2"
+                    >Social Donate Name</label
+                  >
+                  <div class="col-span-3">
+                    <div class="relative w-full">
+                      <div
+                        class="absolute left-4 top-1/2 -translate-y-1/2 w-5 lg:w-6"
+                      >
+                        <img src="/icons/edit-plain.svg" alt="icons" />
+                      </div>
+                      <input
+                        id="head-name"
+                        type="text"
+                        class="pl-11 lg:pl-12 w-full text-black appearance-none font-medium focus:shadow-[0_0_0_2px] focus:shadow-dark-green outline-none transition-all rounded-2xl border border-bg-color p-3 lg:p-4 text-sm lg:text-base placeholder:text-secondary-text-color placeholder:font-medium placeholder:text-sm lg:placeholder:text-base placeholder:leading-normal undefined"
+                        placeholder="Determine Social Donate name"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <hr />
+                <div
+                  class="grid grid-cols-1 md:grid-cols-5 gap-2 md:justify-between items-center"
+                >
+                  <label
+                    for="village-total-citizen"
+                    class="text-secondary-text-color font-semibold text-sm lg:text-base leading-normal col-span-2"
+                    >Choose Category Option</label
+                  >
+                  <div class="col-span-3">
+                    <div class="flex flex-wrap gap-3 md:gap-6">
+                      <label
+                        for="main-material"
+                        class="label-radio label-input-radio md:flex-[40%]"
+                        ><div class="flex gap-2">
+                          <input
+                            type="radio"
+                            id="main-material"
+                            class="input-radio-choose-gender"
+                            name="head-gender"
+                          />Basic Necessities
+                        </div>
+                        <img
+                          src="/icons/bag-2-plain.svg"
+                          alt=""
+                          class="w-5 md:w-6" /></label
+                      ><label
+                        for="money"
+                        class="label-radio label-input-radio md:flex-[40%]"
+                        ><div class="flex gap-2">
+                          <input
+                            type="radio"
+                            id="money"
+                            class="input-radio-choose-gender"
+                            name="head-gender"
+                          />Cash
+                        </div>
+                        <img
+                          src="/icons/money-plain.svg"
+                          alt=""
+                          class="w-5 md:w-6" /></label
+                      ><label
+                        for="gas"
+                        class="label-radio label-input-radio md:flex-[40%]"
+                        ><div class="flex gap-2">
+                          <input
+                            type="radio"
+                            id="gas"
+                            class="input-radio-choose-gender"
+                            name="head-gender"
+                          />Subsidized Fuel
+                        </div>
+                        <img
+                          src="/icons/gas-station.svg"
+                          alt=""
+                          class="w-5 md:w-6" /></label
+                      ><label
+                        for="health"
+                        class="label-radio label-input-radio md:flex-[40%]"
+                        ><div class="flex gap-2">
+                          <input
+                            type="radio"
+                            id="health"
+                            class="input-radio-choose-gender"
+                            name="head-gender"
+                          />Healthcare
+                        </div>
+                        <img src="/icons/health.svg" alt="" class="w-5 md:w-6"
+                      /></label>
+                    </div>
+                  </div>
+                </div>
+                <hr />
+                <div
+                  class="grid grid-cols-1 md:grid-cols-5 gap-2 md:justify-between items-center"
+                >
+                  <label
+                    for="head-email"
+                    class="text-secondary-text-color font-semibold text-sm lg:text-base leading-normal col-span-2"
+                    >Assistance Amount</label
+                  >
+                  <div class="col-span-3">
+                    <div class="relative w-full">
+                      <div
+                        class="absolute left-4 top-1/2 -translate-y-1/2 w-5 lg:w-6"
+                      >
+                        <img src="/icons/dollar-square.svg" alt="icons" />
+                      </div>
+                      <input
+                        id="head-email"
+                        type="number"
+                        class="pl-11 lg:pl-12 w-full text-black appearance-none font-medium focus:shadow-[0_0_0_2px] focus:shadow-dark-green outline-none transition-all rounded-2xl border border-bg-color p-3 lg:p-4 text-sm lg:text-base placeholder:text-secondary-text-color placeholder:font-medium placeholder:text-sm lg:placeholder:text-base placeholder:leading-normal undefined"
+                        placeholder="Type assistance amount"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <hr />
+                <div
+                  class="grid grid-cols-1 md:grid-cols-5 gap-2 md:justify-between items-center"
+                >
+                  <label
+                    for="head-pw"
+                    class="text-secondary-text-color font-semibold text-sm lg:text-base leading-normal col-span-2"
+                    >Assistance Provider Name</label
+                  >
+                  <div class="col-span-3">
+                    <div class="relative w-full">
+                      <div
+                        class="absolute left-4 top-1/2 -translate-y-1/2 w-5 lg:w-6"
+                      >
+                        <img src="/icons/user-square.svg" alt="icons" />
+                      </div>
+                      <input
+                        id="head-pw"
+                        type="text"
+                        class="pl-11 lg:pl-12 w-full text-black appearance-none font-medium focus:shadow-[0_0_0_2px] focus:shadow-dark-green outline-none transition-all rounded-2xl border border-bg-color p-3 lg:p-4 text-sm lg:text-base placeholder:text-secondary-text-color placeholder:font-medium placeholder:text-sm lg:placeholder:text-base placeholder:leading-normal undefined"
+                        placeholder="Type person or organization name"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <hr />
+                <div
+                  class="grid grid-cols-1 md:grid-cols-5 gap-2 md:justify-between items-center"
+                >
+                  <label
+                    for="village-location"
+                    class="text-secondary-text-color font-semibold text-sm lg:text-base leading-normal col-span-2"
+                    >Social Donate Description</label
+                  >
+                  <div class="col-span-3">
+                    <div class="relative w-full">
+                      <textarea
+                        rows="5"
+                        id="village-location"
+                        class="w-full text-black appearance-none font-medium focus:shadow-[0_0_0_2px] focus:shadow-dark-green outline-none transition-all rounded-2xl border border-bg-color p-3 lg:p-4 text-sm lg:text-base placeholder:text-secondary-text-color placeholder:font-medium placeholder:text-sm lg:placeholder:text-base placeholder:leading-normal undefined"
+                        placeholder="Explain more details about the assistance"
+                      ></textarea>
+                    </div>
+                  </div>
+                </div>
+                <hr />
+                <div
+                  class="grid grid-cols-1 md:grid-cols-5 gap-2 md:justify-between items-center"
+                >
+                  <label
+                    for="choose-is-available"
+                    class="text-secondary-text-color font-semibold text-sm lg:text-base leading-normal col-span-2"
+                    >Choose Category Option</label
+                  >
+                  <div class="col-span-3">
+                    <div class="flex flex-wrap gap-3 md:gap-6">
+                      <label
+                        for="available"
+                        class="label-radio label-input-radio md:flex-1"
+                        ><div class="flex gap-2">
+                          <input
+                            type="radio"
+                            id="available"
+                            class="input-radio-choose-gender"
+                            name="is-available"
+                          />Available
+                        </div>
+                        <img
+                          src="/icons/tick-circle.svg"
+                          alt=""
+                          class="w-5 md:w-6" /></label
+                      ><label
+                        for="not-available"
+                        class="label-radio label-input-radio md:flex-1"
+                        ><div class="flex gap-2">
+                          <input
+                            type="radio"
+                            id="not-available"
+                            class="input-radio-choose-gender"
+                            name="is-available"
+                          />Not Available
+                        </div>
+                        <img
+                          src="/icons/close-circle-2.svg"
+                          alt=""
+                          class="w-5 md:w-6"
+                      /></label>
+                    </div>
+                  </div>
+                </div>
+                <hr />
+                <div class="flex justify-end gap-3">
+                  <button
+                    type="button"
+                    class="flex cursor-pointer justify-center hover:opacity-80 items-center gap-2.5 py-3 px-4 lg:py-4 lg:px-6 rounded-xl lg:rounded-2xl text-sm lg:text-base font-medium leading-normal bg-[#FF5070] text-white undefined"
+                  >
+                    Cancel, Don&#x27;t proceed</button
+                  ><button
+                    type="button"
+                    class="flex cursor-pointer justify-center hover:opacity-80 items-center gap-2.5 py-3 px-4 lg:py-4 lg:px-6 rounded-xl lg:rounded-2xl text-sm lg:text-base font-medium leading-normal bg-dark-green text-white undefined"
+                  >
+                    Create Now
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
 
-		<script src="
+    <script src="
 		https://cdn.jsdelivr.net/npm/chart.js@4.5.0/dist/chart.umd.min.js
 		"></script>
 
-		<script src="/src/js/replace-path.js"></script>
-		<script src="/src/js/sidebar.js"></script>
-		<script src="/src/js/citizen-chart.js"></script>
-		<script src="/src/js/datepicker.js"></script>
-		<script src="/src/js/tabs.js"></script>
-		<script src="/src/js/modal.js"></script>
-		<script src="/src/js/select-bank-accordion.js"></script>
-		<script src="/src/js/dashboard-event-reminder.js"></script>
-		<script src="/src/js/upload-image.js"></script>
-	</body>
+    <script src="/src/js/replace-path.js"></script>
+    <script src="/src/js/sidebar.js"></script>
+    <script src="/src/js/citizen-chart.js"></script>
+    <script src="/src/js/datepicker.js"></script>
+    <script src="/src/js/tabs.js"></script>
+    <script src="/src/js/modal.js"></script>
+    <script src="/src/js/select-bank-accordion.js"></script>
+    <script src="/src/js/dashboard-event-reminder.js"></script>
+    <script src="/src/js/upload-image.js"></script>
+  </body>
 </html>
