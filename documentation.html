@@ -1,0 +1,1422 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DesaKita - Project Documentation</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      :root {
+        --primary-color: #34613a;
+        --primary-dark: #2a4f30;
+        --secondary-color: #8ebd55;
+        --accent-color: #fbad48;
+        --text-primary: #001b1a;
+        --text-secondary: #5a7a7e;
+        --bg-primary: #ffffff;
+        --bg-secondary: #f2f9f6;
+        --bg-accent: #f1fae6;
+        --border-color: #e5e7eb;
+        --soft-green: #8ebd55;
+        --soft-red: #ff5070;
+        --blue: #005caa;
+        --yellow: #deff6e;
+        --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+        --shadow-md:
+          0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+        --shadow-lg:
+          0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+        --shadow-xl:
+          0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+      }
+
+      body {
+        font-family: "Lexend Deca", sans-serif;
+        line-height: 1.7;
+        color: var(--text-primary);
+        background: linear-gradient(135deg, #89b854 0%, #042f2b 100%);
+        min-height: 100vh;
+        font-size: 16px;
+      }
+
+      .container {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 2rem;
+      }
+
+      /* Header Styles */
+      .header {
+        background: var(--bg-primary);
+        border-radius: 24px;
+        padding: 4rem 3rem;
+        margin-bottom: 3rem;
+        box-shadow: var(--shadow-xl);
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .header::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background: linear-gradient(90deg, #89b854, #34613a, #fbad48);
+      }
+
+      .header h1 {
+        font-size: 4rem;
+        font-weight: 800;
+        background: #34613a;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-bottom: 1rem;
+        letter-spacing: -0.02em;
+      }
+
+      .header p {
+        font-size: 1.25rem;
+        color: var(--text-secondary);
+        margin-bottom: 2rem;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .version-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        background: #34613a;
+        color: white;
+        padding: 0.75rem 1.5rem;
+        border-radius: 50px;
+        font-size: 0.875rem;
+        font-weight: 600;
+        box-shadow: var(--shadow-md);
+      }
+
+      .version-badge::before {
+        content: "✨";
+        font-size: 1rem;
+      }
+
+      /* Layout */
+      .content {
+        display: grid;
+        grid-template-columns: 1fr 350px;
+        gap: 3rem;
+        align-items: start;
+      }
+
+      .main-content {
+        background: var(--bg-primary);
+        border-radius: 24px;
+        padding: 3rem;
+        box-shadow: var(--shadow-xl);
+        position: relative;
+      }
+
+      .main-content::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background: linear-gradient(90deg, #89b854, #34613a);
+        border-radius: 24px 24px 0 0;
+      }
+
+      .sidebar {
+        background: var(--bg-primary);
+        border-radius: 24px;
+        padding: 2rem;
+        box-shadow: var(--shadow-xl);
+        height: fit-content;
+        position: sticky;
+        top: 2rem;
+        border: 1px solid var(--border-color);
+      }
+
+      /* Section Styles */
+      .section {
+        margin-bottom: 4rem;
+        position: relative;
+      }
+
+      .section:last-child {
+        margin-bottom: 0;
+      }
+
+      .section h2 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: var(--text-primary);
+        margin-bottom: 1.5rem;
+        position: relative;
+        padding-bottom: 1rem;
+      }
+
+      .section h2::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 60px;
+        height: 4px;
+        background: linear-gradient(90deg, #89b854, #34613a);
+        border-radius: 2px;
+      }
+
+      .section h3 {
+        font-size: 1.75rem;
+        font-weight: 600;
+        color: var(--primary-color);
+        margin: 2rem 0 1rem 0;
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+      }
+
+      .section h3::before {
+        content: "▸";
+        color: var(--secondary-color);
+        font-weight: bold;
+      }
+
+      .section h4 {
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: var(--text-secondary);
+        margin: 1.5rem 0 0.75rem 0;
+      }
+
+      .section p {
+        color: var(--text-secondary);
+        margin-bottom: 1rem;
+        line-height: 1.8;
+      }
+
+      .section li {
+        margin-left: 1.5rem;
+        margin-bottom: 0.5rem;
+        color: var(--text-secondary);
+      }
+
+      /* Code Blocks */
+      .code-block {
+        background: var(--bg-accent);
+        border: 1px solid var(--border-color);
+        border-radius: 12px;
+        padding: 1.5rem;
+        margin: 1.5rem 0;
+        overflow-x: auto;
+        font-family: "JetBrains Mono", "Fira Code", "Monaco", monospace;
+        font-size: 0.875rem;
+        position: relative;
+      }
+
+      .code-block::before {
+        content: "Code";
+        position: absolute;
+        top: 0.75rem;
+        right: 1rem;
+        font-size: 0.75rem;
+        font-weight: 600;
+        color: var(--text-secondary);
+        background: var(--bg-primary);
+        padding: 0.25rem 0.75rem;
+        border-radius: 6px;
+        border: 1px solid var(--border-color);
+      }
+
+      .code-block pre {
+        margin: 0;
+        white-space: pre-wrap;
+        word-wrap: break-word;
+        color: var(--text-primary);
+      }
+
+      /* File Structure */
+      .file-structure {
+        background: var(--bg-accent);
+        border: 1px solid var(--border-color);
+        border-radius: 12px;
+        padding: 1.5rem;
+        margin: 1.5rem 0;
+        font-family: "JetBrains Mono", "Fira Code", "Monaco", monospace;
+        font-size: 0.875rem;
+        overflow-x: auto;
+        position: relative;
+      }
+
+      .file-structure::before {
+        content: "Structure";
+        position: absolute;
+        top: 0.75rem;
+        right: 1rem;
+        font-size: 0.75rem;
+        font-weight: 600;
+        color: var(--text-secondary);
+        background: var(--bg-primary);
+        padding: 0.25rem 0.75rem;
+        border-radius: 6px;
+        border: 1px solid var(--border-color);
+      }
+
+      .file-structure .folder {
+        color: var(--primary-color);
+        font-weight: 600;
+      }
+
+      .file-structure .file {
+        color: var(--text-primary);
+      }
+
+      /* Feature Grid */
+      .feature-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 1.5rem;
+        margin: 2rem 0;
+      }
+
+      .feature-card {
+        background: var(--bg-primary);
+        border: 1px solid var(--border-color);
+        border-radius: 16px;
+        padding: 2rem;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .feature-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 3px;
+        background: linear-gradient(90deg, #89b854, #34613a);
+        transform: scaleX(0);
+        transition: transform 0.3s ease;
+      }
+
+      .feature-card:hover {
+        transform: translateY(-8px);
+        box-shadow: var(--shadow-xl);
+        border-color: var(--primary-color);
+      }
+
+      .feature-card:hover::before {
+        transform: scaleX(1);
+      }
+
+      .feature-card h4 {
+        color: var(--primary-color);
+        margin-bottom: 1rem;
+        font-size: 1.25rem;
+        font-weight: 600;
+      }
+
+      .feature-card p {
+        color: var(--text-secondary);
+        line-height: 1.7;
+      }
+
+      /* Tech Stack */
+      .tech-stack {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+        margin: 1.5rem 0;
+      }
+
+      .tech-badge {
+        background: #34613a;
+        color: white;
+        padding: 0.5rem 1rem;
+        border-radius: 50px;
+        font-size: 0.875rem;
+        font-weight: 600;
+        box-shadow: var(--shadow-sm);
+        transition: all 0.3s ease;
+      }
+
+      .tech-badge:hover {
+        transform: translateY(-2px);
+        box-shadow: var(--shadow-md);
+      }
+
+      /* Setup Steps */
+      .setup-steps {
+        background: var(--bg-accent);
+        border-radius: 16px;
+        padding: 2rem;
+        margin: 2rem 0;
+        border: 1px solid var(--border-color);
+      }
+
+      .setup-steps ol {
+        padding-left: 1.5rem;
+      }
+
+      .setup-steps li {
+        margin-bottom: 1rem;
+        color: var(--text-secondary);
+      }
+
+      .setup-steps strong {
+        color: var(--text-primary);
+        font-weight: 600;
+      }
+
+      /* Alerts */
+      .warning,
+      .info {
+        border-radius: 12px;
+        padding: 1.5rem;
+        margin: 1.5rem 0;
+        border-left: 4px solid;
+        position: relative;
+      }
+
+      .warning {
+        background: #fef3c7;
+        border-color: var(--accent-color);
+        color: #92400e;
+      }
+
+      .info {
+        background: var(--bg-accent);
+        border-color: var(--primary-color);
+        color: var(--text-primary);
+      }
+
+      /* Table of Contents */
+      .table-of-contents {
+        list-style: none;
+        padding: 0;
+      }
+
+      .table-of-contents li {
+        margin-bottom: 0.5rem;
+      }
+
+      .table-of-contents a {
+        color: var(--text-secondary);
+        text-decoration: none;
+        font-weight: 500;
+        display: block;
+        padding: 0.75rem 1rem;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+        border: 1px solid transparent;
+      }
+
+      .table-of-contents a:hover {
+        color: var(--primary-color);
+        background: var(--bg-accent);
+        border-color: var(--border-color);
+        transform: translateX(4px);
+      }
+
+      .table-of-contents a.active {
+        background: #34613a;
+        color: white;
+        box-shadow: var(--shadow-md);
+      }
+
+      /* Mobile Navigation */
+      .mobile-toc-toggle {
+        display: none;
+        position: fixed;
+        top: 2rem;
+        right: 2rem;
+        z-index: 1000;
+        background: #34613a;
+        color: white;
+        border: none;
+        border-radius: 50%;
+        width: 56px;
+        height: 56px;
+        font-size: 1.25rem;
+        cursor: pointer;
+        box-shadow: var(--shadow-lg);
+        transition: all 0.3s ease;
+      }
+
+      .mobile-toc-toggle:hover {
+        background: linear-gradient(135deg, #7aa84a, #042f2b);
+        transform: scale(1.1);
+      }
+
+      .mobile-toc-drawer {
+        display: none;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 400px;
+        height: 100vh;
+        background: var(--bg-primary);
+        z-index: 999;
+        box-shadow: var(--shadow-xl);
+        transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        overflow-y: auto;
+        padding: 2rem;
+        transform: translateX(100%);
+      }
+
+      .mobile-toc-drawer.open {
+        transform: translateX(0);
+      }
+
+      .mobile-toc-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 2rem;
+        padding-bottom: 1rem;
+        border-bottom: 2px solid var(--border-color);
+      }
+
+      .mobile-toc-header h3 {
+        color: var(--primary-color);
+        font-size: 1.25rem;
+        font-weight: 600;
+      }
+
+      .mobile-toc-close {
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        color: var(--text-secondary);
+        cursor: pointer;
+        padding: 0.5rem;
+        border-radius: 50%;
+        transition: all 0.3s ease;
+      }
+
+      .mobile-toc-close:hover {
+        background: var(--bg-accent);
+        color: var(--primary-color);
+      }
+
+      .overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 998;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        backdrop-filter: blur(4px);
+      }
+
+      .overlay.open {
+        opacity: 1;
+      }
+
+      /* Responsive Design */
+      @media (max-width: 1200px) {
+        .container {
+          max-width: 100%;
+          padding: 1.5rem;
+        }
+
+        .content {
+          gap: 2rem;
+        }
+
+        .header {
+          padding: 3rem 2rem;
+        }
+
+        .main-content {
+          padding: 2.5rem;
+        }
+      }
+
+      @media (max-width: 1024px) {
+        .header h1 {
+          font-size: 3rem;
+        }
+
+        .header p {
+          font-size: 1.125rem;
+        }
+
+        .section h2 {
+          font-size: 2rem;
+        }
+
+        .section h3 {
+          font-size: 1.5rem;
+        }
+
+        .feature-grid {
+          grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        }
+      }
+
+      @media (max-width: 768px) {
+        .content {
+          grid-template-columns: 1fr;
+          gap: 2rem;
+        }
+
+        .header {
+          padding: 2.5rem 1.5rem;
+          margin-bottom: 2rem;
+        }
+
+        .header h1 {
+          font-size: 2.5rem;
+        }
+
+        .header p {
+          font-size: 1rem;
+        }
+
+        .container {
+          padding: 1rem;
+        }
+
+        .sidebar {
+          display: none;
+        }
+
+        .main-content {
+          padding: 2rem 1.5rem;
+        }
+
+        .section {
+          margin-bottom: 3rem;
+        }
+
+        .section h2 {
+          font-size: 1.75rem;
+        }
+
+        .section h3 {
+          font-size: 1.375rem;
+        }
+
+        .feature-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .mobile-toc-toggle {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .mobile-toc-drawer {
+          display: block;
+          width: 320px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .header {
+          padding: 2rem 1rem;
+        }
+
+        .header h1 {
+          font-size: 2rem;
+        }
+
+        .main-content {
+          padding: 1.5rem 1rem;
+        }
+
+        .section h2 {
+          font-size: 1.5rem;
+        }
+
+        .section h3 {
+          font-size: 1.25rem;
+        }
+
+        .mobile-toc-drawer {
+          width: 325px;
+          padding: 1.5rem;
+        }
+      }
+
+      /* Print styles */
+      @media print {
+        body {
+          background: white;
+        }
+
+        .mobile-toc-toggle,
+        .mobile-toc-drawer,
+        .overlay {
+          display: none !important;
+        }
+
+        .content {
+          grid-template-columns: 1fr;
+        }
+
+        .sidebar {
+          display: block;
+          position: static;
+          box-shadow: none;
+          border: 1px solid #ccc;
+        }
+
+        .header,
+        .main-content,
+        .sidebar {
+          box-shadow: none;
+          border: 1px solid #ccc;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Mobile TOC Toggle Button -->
+    <button
+      class="mobile-toc-toggle"
+      id="mobileTocToggle"
+      aria-label="Open table of contents"
+    >
+      📋
+    </button>
+
+    <!-- Mobile TOC Drawer -->
+    <div class="mobile-toc-drawer" id="mobileTocDrawer">
+      <div class="mobile-toc-header">
+        <h3>Table of Contents</h3>
+        <button
+          class="mobile-toc-close"
+          id="mobileTocClose"
+          aria-label="Close table of contents"
+        >
+          ×
+        </button>
+      </div>
+      <ul class="table-of-contents" id="mobileTocList">
+        <li><a href="#overview">🚀 Project Overview</a></li>
+        <li><a href="#features">✨ Key Features</a></li>
+        <li><a href="#setup">⚙️ Project Setup</a></li>
+        <li><a href="#structure">📁 Project Structure</a></li>
+        <li><a href="#components">🔧 Core Components</a></li>
+        <li><a href="#styling">🎨 Styling System</a></li>
+        <li><a href="#javascript">💻 JavaScript Modules</a></li>
+        <li><a href="#roles">👥 User Roles & Permissions</a></li>
+        <li><a href="#guidelines">📝 Development Guidelines</a></li>
+        <li><a href="#deployment">🚀 Deployment</a></li>
+        <li><a href="#support">🛠️ Support & Maintenance</a></li>
+      </ul>
+
+      <h3
+        style="
+          margin-top: 2rem;
+          color: var(--primary-color);
+          font-size: 1.125rem;
+          font-weight: 600;
+        "
+      >
+        🔗 Quick Links
+      </h3>
+      <ul class="table-of-contents">
+        <li><a href="src/pages/index.html">🔐 Login Page</a></li>
+        <li>
+          <a href="src/pages/head-village/dashboard/dashboard.html"
+            >🏠 Village Head Dashboard</a
+          >
+        </li>
+        <li>
+          <a href="src/pages/head-family/dashboard/dashboard.html"
+            >👨‍👩‍👧‍👦 Head Family Dashboard</a
+          >
+        </li>
+        <li><a href="package.json">📦 Package Configuration</a></li>
+        <li><a href="src/css/input.css">🎨 CSS Configuration</a></li>
+      </ul>
+
+      <h3
+        style="
+          margin-top: 2rem;
+          color: var(--primary-color);
+          font-size: 1.125rem;
+          font-weight: 600;
+        "
+      >
+        🛠️ Tech Stack
+      </h3>
+      <div class="tech-stack">
+        <span class="tech-badge">🚀 HTML5</span>
+        <span class="tech-badge">🎨 CSS3</span>
+        <span class="tech-badge">💻 JavaScript</span>
+        <span class="tech-badge">⚡ Tailwind CSS</span>
+      </div>
+    </div>
+
+    <!-- Overlay -->
+    <div class="overlay" id="overlay"></div>
+
+    <div class="container">
+      <div class="header">
+        <h1>DesaKita</h1>
+        <p>Comprehensive Village Management System Documentation</p>
+        <span class="version-badge">Version 1.0.0</span>
+      </div>
+
+      <div class="content">
+        <div class="main-content">
+          <div class="section" id="overview">
+            <h2>Project Overview</h2>
+            <p>
+              DesaKita is a comprehensive village management system designed to
+              streamline administrative tasks, social programs, and community
+              coordination for Indonesian villages. The system provides two main
+              user roles: Village Head and Head of Household, each with specific
+              functionalities and access levels.
+            </p>
+
+            <div class="tech-stack">
+              <span class="tech-badge">🚀 HTML5</span>
+              <span class="tech-badge">🎨 CSS3</span>
+              <span class="tech-badge">💻 JavaScript</span>
+              <span class="tech-badge">⚡ Tailwind CSS</span>
+            </div>
+          </div>
+
+          <div class="section" id="features">
+            <h2>Key Features</h2>
+            <div class="feature-grid">
+              <div class="feature-card">
+                <h4>🏠 Village Head Dashboard</h4>
+                <p>
+                  Comprehensive dashboard with village statistics, event
+                  management, and administrative tools for village leaders.
+                </p>
+              </div>
+              <div class="feature-card">
+                <h4>👨‍👩‍👧‍👦 Head of Household Portal</h4>
+                <p>
+                  Family management system for household heads to manage family
+                  members and access village services.
+                </p>
+              </div>
+              <div class="feature-card">
+                <h4>💰 Social Donation Management</h4>
+                <p>
+                  Complete system for managing social assistance programs,
+                  applications, and distribution tracking.
+                </p>
+              </div>
+              <div class="feature-card">
+                <h4>📅 Village Schedule System</h4>
+                <p>
+                  Event and development schedule management with reminders and
+                  calendar integration.
+                </p>
+              </div>
+              <div class="feature-card">
+                <h4>📊 Analytics & Reporting</h4>
+                <p>
+                  Data visualization and reporting tools for village statistics
+                  and program effectiveness.
+                </p>
+              </div>
+              <div class="feature-card">
+                <h4>📱 Responsive Design</h4>
+                <p>
+                  Mobile-first design ensuring optimal experience across all
+                  devices and screen sizes.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="section" id="setup">
+            <h2>Project Setup</h2>
+
+            <h3>Prerequisites</h3>
+            <ul>
+              <li>npm (comes with Node.js)</li>
+              <li>Git (for version control)</li>
+            </ul>
+
+            <h3>Installation Steps</h3>
+            <div class="setup-steps">
+              <ol>
+                <li>
+                  <strong>Clone the repository:</strong>
+                  <div class="code-block">
+                    <pre>
+git clone [repository-url]
+cd desakita-html</pre
+                    >
+                  </div>
+                </li>
+                <li>
+                  <strong>Install dependencies:</strong>
+                  <div class="code-block">
+                    <pre>npm install</pre>
+                  </div>
+                </li>
+                <li>
+                  <strong>Start development server:</strong>
+                  <div class="code-block">
+                    <pre>npm run dev</pre>
+                  </div>
+                </li>
+                <li>
+                  <strong>Format code (optional):</strong>
+                  <div class="code-block">
+                    <pre>npm run format</pre>
+                  </div>
+                </li>
+              </ol>
+            </div>
+
+            <div class="info">
+              <strong>Note:</strong> The development server will watch for
+              changes in your CSS files and automatically compile them. The
+              compiled CSS will be available at
+              <code>/src/css/output.css</code>.
+            </div>
+          </div>
+
+          <div class="section" id="structure">
+            <h2>Project Structure</h2>
+
+            <div class="file-structure">
+              <div class="folder">desakita-html/</div>
+              <div class="file">├── package.json</div>
+              <div class="file">├── package-lock.json</div>
+              <div class="file">├── documentation.html</div>
+              <div class="folder">├── public/</div>
+              <div class="file">│ ├── favicon.svg</div>
+              <div class="folder">│ ├── icons/</div>
+              <div class="file">│ │ ├── (100+ SVG icons)</div>
+              <div class="folder">│ └── images/</div>
+              <div class="file">│ ├── (PNG images for UI)</div>
+              <div class="folder">└── src/</div>
+              <div class="folder">├── css/</div>
+              <div class="file">│ ├── input.css</div>
+              <div class="file">│ └── output.css</div>
+              <div class="folder">├── js/</div>
+              <div class="file">│ ├── sidebar.js</div>
+              <div class="file">│ ├── modal.js</div>
+              <div class="file">│ ├── tabs.js</div>
+              <div class="file">│ ├── datepicker.js</div>
+              <div class="file">│ ├── upload-image.js</div>
+              <div class="file">│ ├── citizen-chart.js</div>
+              <div class="file">│ ├── dashboard-event-reminder.js</div>
+              <div class="file">│ ├── select-bank-accordion.js</div>
+              <div class="file">│ └── replace-path.js</div>
+              <div class="folder">└── pages/</div>
+              <div class="folder">├── index.html</div>
+              <div class="folder">├── head-village/</div>
+              <div class="folder">│ ├── dashboard/</div>
+              <div class="folder">│ ├── head-house/</div>
+              <div class="folder">│ ├── social-donate/</div>
+              <div class="folder">│ ├── village-profile/</div>
+              <div class="folder">│ └── village-schedule/</div>
+              <div class="folder">└── head-family/</div>
+              <div class="folder">├── dashboard/</div>
+              <div class="folder">├── family-member/</div>
+              <div class="folder">├── social-donate/</div>
+              <div class="folder">└── village-schedule/</div>
+            </div>
+          </div>
+
+          <div class="section" id="components">
+            <h2>Core Components</h2>
+
+            <h3>1. Authentication System</h3>
+            <p>
+              The login page (<code>src/pages/index.html</code>) provides
+              role-based authentication with two user types:
+            </p>
+            <ul>
+              <li><strong>Village Head:</strong> Full administrative access</li>
+              <li>
+                <strong>Head of Household:</strong> Limited family-focused
+                access
+              </li>
+            </ul>
+
+            <h3>2. Navigation System</h3>
+            <p>
+              Dynamic sidebar navigation implemented in
+              <code>src/js/sidebar.js</code> with features:
+            </p>
+            <ul>
+              <li>Responsive mobile/desktop navigation</li>
+              <li>Active page highlighting</li>
+              <li>Submenu support for complex navigation</li>
+              <li>Path-based menu activation</li>
+            </ul>
+
+            <h3>3. Dashboard Components</h3>
+            <p>
+              Interactive dashboard elements in
+              <code>src/js/dashboard-event-reminder.js</code>:
+            </p>
+            <ul>
+              <li>7-day event calendar</li>
+              <li>Event reminders and notifications</li>
+              <li>Dynamic date navigation</li>
+              <li>Event management interface</li>
+            </ul>
+
+            <h3>4. Form Components</h3>
+            <p>Reusable form elements and utilities:</p>
+            <ul>
+              <li>
+                <strong>Date Picker:</strong> Custom date selection component
+              </li>
+              <li><strong>Image Upload:</strong> File upload with preview</li>
+              <li><strong>Modal System:</strong> Popup dialogs for forms</li>
+              <li><strong>Tab Navigation:</strong> Multi-tab interfaces</li>
+            </ul>
+          </div>
+
+          <div class="section" id="styling">
+            <h2>Styling System</h2>
+
+            <h3>Tailwind CSS Configuration</h3>
+            <p>
+              The project uses Tailwind CSS v4 with custom theme configuration
+              in <code>src/css/input.css</code>:
+            </p>
+
+            <div class="code-block">
+              <pre>
+@theme {
+  --color-bg-color: #f2f9f6;
+  --color-secondary-text-color: #5a7a7e;
+  --color-black: #001b1a;
+  --color-dark-green: #34613a;
+  --color-foreshadow: #f1fae6;
+  --color-yellow: #deff6e;
+  --color-soft-green: #8ebd55;
+  --color-soft-red: #ff5070;
+  --color-blue: #005caa;
+  --color-aksen: #fbad48;
+}</pre
+              >
+            </div>
+
+            <h3>Custom Components</h3>
+            <ul>
+              <li>
+                <strong>Radio Button Groups:</strong> Custom styled radio inputs
+                for role selection
+              </li>
+              <li>
+                <strong>Form Inputs:</strong> Consistent styling across all form
+                elements
+              </li>
+              <li>
+                <strong>Tables:</strong> Responsive table designs with rounded
+                corners
+              </li>
+              <li>
+                <strong>Cards:</strong> Reusable card components for content
+                display
+              </li>
+            </ul>
+
+            <h3>Typography</h3>
+            <p>
+              Uses Lexend Deca font family for optimal readability and modern
+              appearance.
+            </p>
+          </div>
+
+          <div class="section" id="javascript">
+            <h2>JavaScript Modules</h2>
+
+            <h3>Core Functionality</h3>
+            <ul>
+              <li>
+                <strong>sidebar.js:</strong> Navigation management and
+                responsive behavior
+              </li>
+              <li><strong>modal.js:</strong> Popup dialog system</li>
+              <li><strong>tabs.js:</strong> Tab navigation component</li>
+              <li><strong>datepicker.js:</strong> Custom date selection</li>
+              <li>
+                <strong>upload-image.js:</strong> File upload with preview
+              </li>
+              <li>
+                <strong>citizen-chart.js:</strong> Data visualization charts
+              </li>
+              <li>
+                <strong>dashboard-event-reminder.js:</strong> Calendar and event
+                management
+              </li>
+              <li>
+                <strong>select-bank-accordion.js:</strong> Bank selection
+                interface
+              </li>
+              <li><strong>replace-path.js:</strong> URL path management</li>
+            </ul>
+
+            <h3>Event Handling</h3>
+            <p>All JavaScript modules use modern event handling patterns:</p>
+            <ul>
+              <li>Event delegation for dynamic content</li>
+              <li>Responsive design considerations</li>
+              <li>Error handling and validation</li>
+              <li>Performance optimization techniques</li>
+            </ul>
+          </div>
+
+          <div class="section" id="roles">
+            <h2>User Roles & Permissions</h2>
+
+            <h3>Village Head (Kepala Desa)</h3>
+            <p>Full administrative access with capabilities:</p>
+            <ul>
+              <li>Dashboard with village statistics</li>
+              <li>Head of household management</li>
+              <li>Social donation program administration</li>
+              <li>Village profile management</li>
+              <li>Event and development schedule management</li>
+              <li>Data analytics and reporting</li>
+            </ul>
+
+            <h3>Head of Household (Kepala Rumah Tangga)</h3>
+            <p>Family-focused access with capabilities:</p>
+            <ul>
+              <li>Family member management</li>
+              <li>Social donation applications</li>
+              <li>Village schedule viewing</li>
+              <li>Personal dashboard</li>
+              <li>Limited administrative functions</li>
+            </ul>
+          </div>
+
+          <div class="section" id="guidelines">
+            <h2>Development Guidelines</h2>
+
+            <h3>Code Style</h3>
+            <ul>
+              <li>Use Prettier for code formatting</li>
+              <li>Follow consistent naming conventions</li>
+              <li>Maintain responsive design principles</li>
+              <li>Use semantic HTML elements</li>
+              <li>Implement proper accessibility features</li>
+            </ul>
+
+            <h3>File Organization</h3>
+            <ul>
+              <li>Keep related files in appropriate directories</li>
+              <li>Use descriptive file names</li>
+              <li>Separate concerns (HTML, CSS, JS)</li>
+              <li>Maintain consistent folder structure</li>
+            </ul>
+
+            <h3>Performance Considerations</h3>
+            <ul>
+              <li>Optimize images for web use</li>
+              <li>Minimize JavaScript bundle size</li>
+              <li>Use efficient CSS selectors</li>
+              <li>Implement lazy loading where appropriate</li>
+            </ul>
+
+            <div class="warning">
+              <strong>Important:</strong> Always test changes across different
+              devices and browsers to ensure compatibility and responsive
+              behavior.
+            </div>
+          </div>
+
+          <div class="section" id="deployment">
+            <h2>Deployment</h2>
+
+            <h3>Production Build</h3>
+            <p>For production deployment:</p>
+            <ol>
+              <li>Build the CSS files: <code>npm run dev</code></li>
+              <li>Ensure all assets are properly referenced</li>
+              <li>Test all functionality thoroughly</li>
+              <li>Deploy to your web server</li>
+            </ol>
+
+            <h3>Server Requirements</h3>
+            <ul>
+              <li>Static file hosting capability</li>
+              <li>HTTPS support (recommended)</li>
+              <li>Proper MIME type configuration</li>
+              <li>URL rewriting for SPA-like behavior (optional)</li>
+            </ul>
+          </div>
+
+          <div class="section" id="support">
+            <h2>Support & Maintenance</h2>
+
+            <p>For technical support and maintenance:</p>
+            <ul>
+              <li>Regularly update dependencies</li>
+              <li>Monitor for security vulnerabilities</li>
+              <li>Backup data and configurations</li>
+              <li>Test functionality after updates</li>
+              <li>Maintain documentation updates</li>
+            </ul>
+
+            <div class="info">
+              <strong>Note:</strong> This documentation should be updated
+              whenever significant changes are made to the project structure or
+              functionality.
+            </div>
+          </div>
+        </div>
+
+        <div class="sidebar">
+          <h3
+            style="
+              color: var(--primary-color);
+              margin-bottom: 1.5rem;
+              font-size: 1.25rem;
+              font-weight: 600;
+            "
+          >
+            📋 Table of Contents
+          </h3>
+          <ul class="table-of-contents">
+            <li><a href="#overview">🚀 Project Overview</a></li>
+            <li><a href="#features">✨ Key Features</a></li>
+            <li><a href="#setup">⚙️ Project Setup</a></li>
+            <li><a href="#structure">📁 Project Structure</a></li>
+            <li><a href="#components">🔧 Core Components</a></li>
+            <li><a href="#styling">🎨 Styling System</a></li>
+            <li><a href="#javascript">💻 JavaScript Modules</a></li>
+            <li><a href="#roles">👥 User Roles & Permissions</a></li>
+            <li><a href="#guidelines">📝 Development Guidelines</a></li>
+            <li><a href="#deployment">🚀 Deployment</a></li>
+            <li><a href="#support">🛠️ Support & Maintenance</a></li>
+          </ul>
+
+          <h3
+            style="
+              color: var(--primary-color);
+              margin: 2rem 0 1rem 0;
+              font-size: 1.25rem;
+              font-weight: 600;
+            "
+          >
+            🛠️ Tech Stack
+          </h3>
+          <div class="tech-stack">
+            <span class="tech-badge">🚀 HTML5</span>
+            <span class="tech-badge">🎨 CSS3</span>
+            <span class="tech-badge">💻 JavaScript</span>
+            <span class="tech-badge">⚡ Tailwind CSS</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Enhanced Mobile TOC Drawer functionality
+      const mobileTocToggle = document.getElementById("mobileTocToggle");
+      const mobileTocDrawer = document.getElementById("mobileTocDrawer");
+      const mobileTocClose = document.getElementById("mobileTocClose");
+      const overlay = document.getElementById("overlay");
+
+      function openMobileToc() {
+        overlay.style.display = "block";
+        mobileTocDrawer.style.display = "block";
+        document.body.style.overflow = "hidden";
+
+        // Trigger reflow
+        mobileTocDrawer.offsetHeight;
+
+        mobileTocDrawer.classList.add("open");
+        overlay.classList.add("open");
+
+        // Add entrance animation
+        setTimeout(() => {
+          mobileTocDrawer.style.transform = "translateX(0)";
+        }, 10);
+      }
+
+      function closeMobileToc() {
+        mobileTocDrawer.style.transform = "translateX(100%)";
+        overlay.classList.remove("open");
+        document.body.style.overflow = "";
+
+        setTimeout(() => {
+          mobileTocDrawer.classList.remove("open");
+          mobileTocDrawer.style.display = "none";
+          overlay.style.display = "none";
+        }, 300);
+      }
+
+      mobileTocToggle.addEventListener("click", openMobileToc);
+      mobileTocClose.addEventListener("click", closeMobileToc);
+      overlay.addEventListener("click", closeMobileToc);
+
+      // Ensure overlay is properly initialized
+      overlay.style.display = "none";
+
+      // Close mobile TOC on escape key
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape" && mobileTocDrawer.classList.contains("open")) {
+          closeMobileToc();
+        }
+      });
+
+      // Enhanced smooth scrolling for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            const headerOffset = 100;
+            const elementPosition = target.getBoundingClientRect().top;
+            const offsetPosition =
+              elementPosition + window.pageYOffset - headerOffset;
+
+            window.scrollTo({
+              top: offsetPosition,
+              behavior: "smooth",
+            });
+
+            // Close mobile TOC if open
+            closeMobileToc();
+          }
+        });
+      });
+
+      // Enhanced active state management
+      const sections = document.querySelectorAll(".section");
+      const tocLinks = document.querySelectorAll(
+        '.table-of-contents a[href^="#"]'
+      );
+
+      function updateActiveLink() {
+        let current = "";
+        const scrollPosition = window.scrollY + 150;
+
+        sections.forEach((section) => {
+          const sectionTop = section.offsetTop;
+          const sectionHeight = section.offsetHeight;
+
+          if (
+            scrollPosition >= sectionTop &&
+            scrollPosition < sectionTop + sectionHeight
+          ) {
+            current = section.getAttribute("id");
+          }
+        });
+
+        tocLinks.forEach((link) => {
+          link.classList.remove("active");
+          if (link.getAttribute("href") === `#${current}`) {
+            link.classList.add("active");
+          }
+        });
+      }
+
+      // Throttled scroll event for better performance
+      let ticking = false;
+      function requestTick() {
+        if (!ticking) {
+          requestAnimationFrame(updateActiveLink);
+          ticking = true;
+        }
+      }
+
+      function updateTicking() {
+        ticking = false;
+      }
+
+      window.addEventListener("scroll", requestTick);
+      window.addEventListener("scroll", updateTicking);
+
+      // Update active link on page load
+      window.addEventListener("load", updateActiveLink);
+
+      // Close mobile TOC when clicking on a link
+      document
+        .querySelectorAll('.mobile-toc-drawer a[href^="#"]')
+        .forEach((link) => {
+          link.addEventListener("click", closeMobileToc);
+        });
+
+      // Handle window resize for responsive behavior
+      window.addEventListener("resize", function () {
+        if (
+          window.innerWidth > 768 &&
+          mobileTocDrawer.classList.contains("open")
+        ) {
+          closeMobileToc();
+        }
+      });
+
+      // Add intersection observer for smooth animations
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px",
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.style.opacity = "1";
+            entry.target.style.transform = "translateY(0)";
+          }
+        });
+      }, observerOptions);
+
+      // Observe sections for animation
+      document.querySelectorAll(".section").forEach((section) => {
+        section.style.opacity = "0";
+        section.style.transform = "translateY(20px)";
+        section.style.transition = "opacity 0.6s ease, transform 0.6s ease";
+        observer.observe(section);
+      });
+
+      // Add hover effects to feature cards
+      document.querySelectorAll(".feature-card").forEach((card) => {
+        card.addEventListener("mouseenter", function () {
+          this.style.transform = "translateY(-8px) scale(1.02)";
+        });
+
+        card.addEventListener("mouseleave", function () {
+          this.style.transform = "translateY(0) scale(1)";
+        });
+      });
+
+      // Add loading animation
+      window.addEventListener("load", function () {
+        document.body.style.opacity = "0";
+        document.body.style.transition = "opacity 0.5s ease";
+
+        setTimeout(() => {
+          document.body.style.opacity = "1";
+        }, 100);
+      });
+    </script>
+  </body>
+</html>
